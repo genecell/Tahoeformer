@@ -1,3 +1,5 @@
+# datasets.py
+
 import torch
 from torch.utils.data import Dataset
 import pandas as pd
@@ -6,7 +8,7 @@ import os
 import pyfaidx 
 import kipoiseq.transforms.functional 
 
-# --- Global Constants and Configuration ---
+# --- Global Config ---
 # Enformer typically uses a 196,608 bp input sequence.
 # We will use a shorter input (1/4 of usual length) to speed up training.
 ENFORMER_INPUT_SEQ_LENGTH = 49_152 
@@ -18,7 +20,8 @@ TSS_REGIONS_CSV_PATH = "data/Enformer_genomic_regions_TSSCenteredGenes_FixedOver
 # Path to pseudobulk target data, matching the provided dummy file
 PSEUDOBULK_TARGET_DATA_PATH = "data/pseudobulk_dummy.csv"
 
-# --- Helper Classes ---
+# ----------------------
+
 
 class GenomeOneHotEncoder:
     """
@@ -31,7 +34,7 @@ class GenomeOneHotEncoder:
     def _one_hot_encode(sequence: str) -> np.ndarray:
         ## one hot encodes DNA using the same code from the original Enformer paper. 
         ## Ensures one-hot encoding is consistent with representations Enformer has 
-        ## already learned for more efficient transfer learning
+        ## already learned
         return kipoiseq.transforms.functional.one_hot_dna(sequence).astype(np.float32)
 
     def encode(self, seq: str) -> np.ndarray:
@@ -102,10 +105,10 @@ class FastaReader:
         chrom_len = len(self.genome[true_chrom_name])
         seq_len_requested = end_0based_exclusive - start_0based
 
-        # Initialize sequence with Ns for padding
+        # init sequence with Ns for padding
         sequence_parts = []
         
-        # Handle padding at the beginning
+        # handle padding at the beginning
         padding_start_len = 0
         if start_0based < 0:
             padding_start_len = abs(start_0based)
@@ -114,7 +117,7 @@ class FastaReader:
         else:
             effective_start = start_0based
 
-        # Determine the part of the sequence to fetch from FASTA
+        # determine the part of the sequence to fetch from FASTA
         fetch_len = min(end_0based_exclusive, chrom_len) - effective_start
         
         if fetch_len > 0:
@@ -122,7 +125,7 @@ class FastaReader:
         elif effective_start >= chrom_len: # Requested start is beyond chromosome end
              pass # No sequence to fetch, only padding needed
 
-        # Handle padding at the end
+        # handle padding at the end
         current_len = sum(len(p) for p in sequence_parts)
         padding_end_len = seq_len_requested - current_len
         if padding_end_len > 0:
@@ -140,7 +143,7 @@ class FastaReader:
         return final_sequence
 
 
-# --- Main Dataset Class ---
+# --- Main Dataset Classes ---
 
 class TahoeDataset(Dataset):
     """
@@ -161,7 +164,7 @@ class TahoeDataset(Dataset):
                  enformer_input_seq_length: int = ENFORMER_INPUT_SEQ_LENGTH,
                  regions_csv_gene_col: str = 'gene_name',        # Gene ID column in tss_regions_csv
                  pseudobulk_csv_gene_col: str = 'gene_id',     # Gene ID column in pseudobulk_data_csv
-                 regions_csv_chr_col: str = 'chr',             # Chromosome column in tss_regions_csv
+                 regions_csv_chr_col: str = 'seqnames',      # Chromosome column in tss_regions_csv
                  regions_csv_start_col: str = 'starts',        # 0-based start col in tss_regions_csv
                  regions_csv_end_col: str = 'ends'):           # 0-based exclusive end col in tss_regions_csv
         super().__init__()
@@ -247,23 +250,9 @@ class TahoeDataset(Dataset):
 
             # Check for genes in pseudobulk_df not found in regions_df (and thus dropped)
             original_pseudobulk_genes = set(pseudobulk_df[self.pseudobulk_gene_col].unique())
-            # Note: self.samples_df will use the column name from regions_df if there's a name conflict, 
-            # but the values will be from pseudobulk_df where they matched. For checking which *original* pseudobulk genes made it,
-            # we refer to the gene column from pseudobulk that was used for the merge in self.samples_df.
-            # If the column names for genes were different in the two DFs (e.g. gene_name_x, gene_name_y after merge), 
-            # we need to be careful. Assuming they become the same or we use the one from regions_df as the key.
-            # Since we forced astype(str) and used left_on and right_on, the merged df has self.regions_gene_col 
-            # which contains the matched keys.
+            
             merged_pseudobulk_genes = set(self.samples_df[self.regions_gene_col].unique()) # Genes that made it into the merge, identified by the regions_gene_col key
             
-            # To correctly identify which pseudobulk genes were dropped, we compare original pseudobulk genes to the keys that successfully merged
-            # This assumes that if a pseudobulk_gene_col value matched a regions_gene_col, that gene effectively made it.
-            # We need to consider that the set of unique values in samples_df[self.regions_gene_col] are the keys that were matched FROM the regions_df.
-            # A more direct way is to check which pseudobulk_df keys are NOT in the set of successfully merged keys.
-            
-            # Re-deriving the pseudobulk genes that are in the final samples_df based on the right_on key
-            # The self.samples_df contains columns from both. If self.pseudobulk_gene_col was different from self.regions_gene_col,
-            # it would also be in self.samples_df. If they were the same, only one such column exists.
             final_merged_keys_from_pseudobulk_perspective = set(self.samples_df[self.pseudobulk_gene_col].unique())
             dropped_pseudobulk_genes = original_pseudobulk_genes - final_merged_keys_from_pseudobulk_perspective
             
@@ -318,7 +307,7 @@ class TahoeDataset(Dataset):
         # --- Sequence window calculation ---
         actual_csv_window_len = csv_region_end - csv_region_start
         if actual_csv_window_len != self.ORIGINAL_ENFORMER_WINDOW_SIZE:
-            # This warning helps if the input CSV regions are not consistently 196kb.
+            # Warning if the input CSV regions are not consistently 196kb.
             # The centering logic below will still try to work based on csv_region_end.
             print(f"WARNING for gene {gene_name_for_logging} (idx {idx}): Region {chrom}:{csv_region_start}-{csv_region_end} from CSV "
                   f"has length {actual_csv_window_len}bp, but expected {self.ORIGINAL_ENFORMER_WINDOW_SIZE}bp "
@@ -351,3 +340,152 @@ class TahoeDataset(Dataset):
 
         return one_hot_sequence_tensor, target_tensor
 
+
+# --- SMILES Tokenizer ---
+class SMILESTokenizer:
+    """
+    Simple char-level SMILES tokenizer with [PAD]/[UNK] and fixed max length.
+    """
+    def __init__(self, smiles_list, pad_token='[PAD]', unk_token='[UNK]', max_length=128):
+        chars = sorted(set(''.join(smiles_list)))
+        self.pad_token = pad_token
+        self.unk_token = unk_token
+        self.idx2char = [pad_token, unk_token] + chars
+        self.char2idx = {c:i for i,c in enumerate(self.idx2char)}
+        self.max_length = max_length
+
+    def encode(self, smiles: str):
+        idxs = [ self.char2idx.get(c, self.char2idx[self.unk_token]) for c in smiles ]
+        if len(idxs) > self.max_length:
+            idxs = idxs[:self.max_length]
+        mask = [1]*len(idxs)
+        pad_len = self.max_length - len(idxs)
+        idxs.extend([self.char2idx[self.pad_token]]*pad_len)
+        mask.extend([0]*pad_len)
+        return idxs, mask
+
+# --- Extended Dataset for SMILES ---
+class TahoeSMILESDataset(Dataset):
+    """
+    Extends TahoeDataset to also return:
+        - SMILES tokens + mask
+        - drug dose
+        - target expression
+    """
+    def __init__(self,
+            tss_regions_csv_path: str,
+             genome_fasta_path: str,
+             pseudobulk_data_path: str,
+             drug_metadata_path: str,
+             enformer_input_seq_length: int = ENFORMER_INPUT_SEQ_LENGTH,
+             smiles_max_length: int       = 128,
+             regions_csv_gene_col: str    = 'gene_name',
+             pseudobulk_csv_gene_col: str = 'gene_id',
+             regions_csv_chr_col: str     = 'seqnames',
+             regions_csv_start_col: str   = 'starts',
+             regions_csv_end_col: str     = 'ends'):
+        super().__init__()
+
+        # store config
+        self.seq_len = enformer_input_seq_length
+        self.smiles_max_length = smiles_max_length
+        self.regions_gene_col    = regions_csv_gene_col
+        self.pbulk_gene_col      = pseudobulk_csv_gene_col
+        self.regions_chr_col     = regions_csv_chr_col
+        self.regions_start_col   = regions_csv_start_col
+        self.regions_end_col     = regions_csv_end_col
+
+        # load & merge regions + pseudobulk
+        print(f"  Loading TSS regions from: {tss_regions_csv_path}")
+        try:
+            regs = pd.read_csv(tss_regions_csv_path)
+            print(f"    Successfully loaded regions CSV with {len(regs)} gene region entries.")
+        except FileNotFoundError:
+            print(f"FATAL ERROR: Regions CSV file not found at {tss_regions_csv_path}")
+            raise
+        except Exception as e:
+            print(f"FATAL ERROR loading regions CSV: {e}")
+            raise
+
+        print(f"  Loading pseudobulk targets from: {pseudobulk_data_path} (expected Parquet format)")
+        try:
+            pb = pd.read_parquet(pseudobulk_data_path)
+            print(f"    Successfully loaded pseudobulk Parquet file with {len(pb)} entries.")
+        except FileNotFoundError:
+            print(f"FATAL ERROR: Pseudobulk Parquet file not found at {pseudobulk_data_path}")
+            raise
+        except Exception as e:
+            # This might catch errors if the correct Parquet engine (e.g., pyarrow) is not installed
+            print(f"FATAL ERROR loading or parsing pseudobulk Parquet file: {e}")
+            print("  Ensure the file is a valid Parquet file and you have a Parquet engine like 'pyarrow' or 'fastparquet' installed.")
+            raise
+
+        # Ensure gene ID columns are strings for merging
+        regs[self.regions_gene_col] = regs[self.regions_gene_col].astype(str)
+        pb[self.pbulk_gene_col]     = pb[self.pbulk_gene_col].astype(str)
+
+        print(f"  Merging genomic regions with pseudobulk target data...")
+        print(f"    Regions gene column: '{self.regions_gene_col}', Pseudobulk gene column: '{self.pbulk_gene_col}'")
+        self.samples_df = regs.merge(
+            pb,
+            left_on  = self.regions_gene_col,
+            right_on = self.pbulk_gene_col,
+            how      = 'inner'
+        )
+
+        # load drug metadata & tokenizer
+        dm = pd.read_csv(drug_metadata_path)
+        dm['canonical_smiles'] = dm['canonical_smiles'].fillna('').astype(str)
+        self.smiles_tok = SMILESTokenizer(
+            dm['canonical_smiles'].tolist(),
+            max_length=self.smiles_max_length
+        )
+        self.drug_meta = dm.set_index('drug')
+
+        # fasta reader & one-hot encoder
+        self.fasta_reader = FastaReader(genome_fasta_path)
+        self.encoder      = GenomeOneHotEncoder(sequence_length=self.seq_len)
+
+    def __len__(self):
+        return len(self.samples_df)
+
+    def __getitem__(self, idx):
+        row = self.samples_df.iloc[idx]
+
+        # --- DNA sequence ---
+        chrom = str(row[self.regions_chr_col])
+        start = int(row[self.regions_start_col])
+        end   = int(row[self.regions_end_col])
+        orig = end - start
+        if self.seq_len != orig:
+            center = end - orig//2
+            half   = self.seq_len//2
+            start, end = center-half, center+half
+
+        seq = self.fasta_reader.get_sequence(chrom, start, end)
+        oh  = self.encoder.encode(seq)
+        seq_tensor = torch.tensor(oh, dtype=torch.float32)
+
+        # --- SMILES + mask ---
+        drug_id_for_smiles = row['drug_id'] # Keep original drug_id for SMILES lookup
+        smiles = self.drug_meta.at[drug_id_for_smiles, 'canonical_smiles'] \
+                     if drug_id_for_smiles in self.drug_meta.index else ''
+        ids, mask = self.smiles_tok.encode(smiles)
+        smiles_ids  = torch.tensor(ids,  dtype=torch.long)
+        smiles_mask = torch.tensor(mask, dtype=torch.bool)
+
+        # --- dose & target ---
+        dose_val = float(row['drug_dose'])
+        expression_val = float(row['expression'])
+
+        dose_tensor = torch.tensor([dose_val], dtype=torch.float32)
+        tgt_tensor  = torch.tensor([expression_val], dtype=torch.float32)
+
+        # --- Metadata for Logging ---
+        # These names must match what's expected by pl_models.py if it unpacks them directly.
+        # self.pbulk_gene_col is used for gene_id (as it's the one from pseudobulk data matching regions)
+        gene_id_meta = str(row[self.pbulk_gene_col]) 
+        drug_id_meta = str(row['drug_id'])      # This column comes from pseudobulk_df
+        cell_line_meta = str(row['cell_line'])  # This column comes from pseudobulk_df
+
+        return seq_tensor, smiles_ids, smiles_mask, dose_tensor, tgt_tensor, gene_id_meta, drug_id_meta, cell_line_meta
