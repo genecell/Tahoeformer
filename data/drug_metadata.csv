@@ -1,0 +1,380 @@
+drug,targets,moa-broad,moa-fine,human-approved,clinical-trials,gpt-notes-approval,canonical_smiles,pubchem_cid
+Talc,,unclear,unclear,yes,yes,Talc used in pharma and cosmetics; safety under review for some uses.,[OH-].[OH-].[O-][Si]12O[Si]3(O[Si](O1)(O[Si](O2)(O3)[O-])[O-])[O-].[Mg+2].[Mg+2].[Mg+2],165411828.0
+Bortezomib,PSMB5,inhibitor/antagonist,Proteasome inhibitor,yes,yes,Approved for multiple myeloma and mantle cell lymphoma.,B(C(CC(C)C)NC(=O)C(CC1=CC=CC=C1)NC(=O)C2=NC=CN=C2)(O)O,387447.0
+Ixazomib,PSMB5,inhibitor/antagonist,Proteasome inhibitor,yes,yes,Approved for multiple myeloma treatment.,B(C(CC(C)C)NC(=O)CNC(=O)C1=C(C=CC(=C1)Cl)Cl)(O)O,25183872.0
+Ixazomib citrate,"PSMB1, PSMB2, PSMB5",inhibitor/antagonist,Proteasome inhibitor,yes,yes,Approved for multiple myeloma treatment as part of a combination therapy.,B1(OC(=O)C(O1)(CC(=O)O)CC(=O)O)C(CC(C)C)NC(=O)CNC(=O)C2=C(C=CC(=C2)Cl)Cl,56844015.0
+Lactate (calcium),,unclear,unclear,yes,yes,"Used in medical settings, but not specifically approved as a standalone drug.",C.CC(C(=O)[O-])O.[Ca+2],168311648.0
+Bisoprolol (hemifumarate),ADRB1,inhibitor/antagonist,Adrenoceptor agonist,yes,yes,"Approved for hypertension, heart failure, and angina.",C.CC(C)NCC(COC1=CC=C(C=C1)COCCOC(C)C)O.C(=CC(=O)O)C(=O)O,168312271.0
+Fumaric acid,,inhibitor/antagonist,unclear,yes,yes,Used in psoriasis treatment as part of fumaric acid esters.,C(=CC(=O)O)C(=O)O,444972.0
+Hydroxyurea,"RRM2, RRM1",inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for sickle cell anemia and certain cancers.,C(=O)(N)NO,3657.0
+L-Eflornithine (monohydrochloride),ODC1,inhibitor/antagonist,unclear,yes,yes,Used to treat sleeping sickness. Approved for human use.,C(CC(C(F)F)(C(=O)O)N)CN.Cl,16048568.0
+Cysteamine (hydrochloride),,unclear,unclear,yes,yes,FDA-approved for cystinosis treatment.,C(CS)N.Cl,9082.0
+Darinaparsin,,unclear,unclear,no,yes,Used in clinical trials for certain cancers only.,C[As](C)SCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N,11683005.0
+Entecavir (monohydrate),,unclear,unclear,yes,yes,Approved for treating hepatitis B infection.,C=C1C(CC(C1CO)O)N2C=NC3=C2N=C(NC3=O)N.O,135526609.0
+Allantoin,,unclear,unclear,yes,yes,Allantoin is approved as a skin protectant by the FDA.,C1(C(=O)NC(=O)N1)NC(=O)N,204.0
+5-Fluorouracil,TYMS,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Widely used chemotherapy drug. Approved for cancer treatment.,C1=C(C(=O)NC(=O)N1)F,3385.0
+L-Thyroxine (sodium salt pentahydrate),,unclear,unclear,yes,yes,"Approved for hypothyroidism, a form of standard thyroid hormone replacement therapy.",C1=C(C=C(C(=C1I)OC2=CC(=C(C(=C2)I)O)I)I)CC(C(=O)[O-])N.O.O.O.O.O.[Na+],23665037.0
+Gallic acid,,inhibitor/antagonist,Cyclooxygenase inhibitor,no,yes,"Used in supplements, studied for antioxidant properties.",C1=C(C=C(C(=C1O)O)O)C(=O)O,370.0
+Gallic acid (hydrate),,inhibitor/antagonist,Cyclooxygenase inhibitor,no,yes,Evaluated in trials but not approved as a standalone drug.,C1=C(C=C(C(=C1O)O)O)C(=O)O.O,24721416.0
+ERK5-IN-2,MAPK7,inhibitor/antagonist,Other MAPK inhibitor,no,no,Not found in clinicaltrials.gov database as of the latest available data.,C1=CC(=C(C(=C1)Br)C(=O)C2=CNC(=C2)C(=O)NC3=CN=CC=C3)F,118959080.0
+Vilanterol,ADRB2,activator/agonist,Adrenoceptor agonist,yes,yes,Combined with fluticasone furoate for asthma and COPD treatment.,C1=CC(=C(C(=C1)Cl)COCCOCCCCCCNCC(C2=CC(=C(C=C2)O)CO)O)Cl,10184665.0
+Niclosamide (olamine),STAT3,inhibitor/antagonist,unclear,yes,yes,"Approved for parasitic infections, investigated for other uses.",C1=CC(=C(C=C1[N+](=O)[O-])Cl)NC(=O)C2=C(C=CC(=C2)Cl)O.C(CO)N,14992.0
+Norepinephrine (hydrochloride),"ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, ADRA2C, ADRB1",activator/agonist,Adrenoceptor agonist,yes,yes,Approved for human use as a medication to treat low blood pressure.,C1=CC(=C(C=C1C(CN)O)O)O.Cl,11672905.0
+Triclosan,,inhibitor/antagonist,unclear,no,yes,Banned in soaps; used in some consumer products and healthcare settings.,C1=CC(=C(C=C1Cl)O)OC2=C(C=C(C=C2)Cl)Cl,5564.0
+Mitoxantrone (dihydrochloride),"TOP2A, TOP2B, PRKCA",inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for cancer and multiple sclerosis treatment.,C1=CC(=C2C(=C1NCCNCCO)C(=O)C3=C(C=CC(=C3C2=O)O)O)NCCNCCO.Cl.Cl,51082.0
+Pentamidine (isethionate),PRLR,inhibitor/antagonist,unclear,yes,yes,Used to treat Pneumocystis pneumonia and African trypanosomiasis.,C1=CC(=CC=C1C(=N)N)OCCCCCOC2=CC=C(C=C2)C(=N)N.C(CS(=O)(=O)O)O.C(CS(=O)(=O)O)O,8813.0
+Folic acid,,unclear,unclear,yes,yes,Widely used as a dietary supplement and in fortified foods.,C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N,135398658.0
+Balsalazide (sodium hydrate),"IL6, STAT3",unclear,JAK/STAT inhibitor,yes,yes,Used for ulcerative colitis treatment in humans.,C1=CC(=CC=C1C(=O)NCCC(=O)[O-])N=NC2=CC(=C(C=C2)[O-])C(=O)O.O.O.[Na+].[Na+],92044433.0
+Resveratrol,SIRT1,unclear,unclear,no,yes,"Studies showed promising results, but no approval for therapeutic use.",C1=CC(=CC=C1C=CC2=CC(=CC(=C2)O)O)O,445154.0
+PF-06260933,MAP4K4,inhibitor/antagonist,Other MAPK inhibitor,no,yes,Investigated for treating pain; not approved for human use.,C1=CC(=CC=C1C2=C(N=CC(=C2)C3=CN=C(C=C3)N)N)Cl,118701008.0
+Daidzin,ALDH2,inhibitor/antagonist,unclear,no,yes,investigated for alcoholism; not approved for treatment,C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)OC4C(C(C(C(O4)CO)O)O)O)O,107971.0
+Pemetrexed,"TYMS, DHFR, GART",inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Chemotherapy drug for mesothelioma and non-small cell lung cancer.,C1=CC(=CC=C1CCC2=CNC3=C2C(=O)NC(=N3)N)C(=O)NC(CCC(=O)O)C(=O)O,135410875.0
+Econazole,,unclear,unclear,yes,yes,Antifungal approved for dermatological use.,C1=CC(=CC=C1COC(CN2C=CN=C2)C3=C(C=C(C=C3)Cl)Cl)Cl,3198.0
+XRK3F2,,inhibitor/antagonist,unclear,no,no,No results found on clinicaltrials.gov,C1=CC(=CC=C1COC2=C(C=C(C=C2)CNCCO)OCC3=CC=C(C=C3)F)F.Cl,135397144.0
+Arbutin,"MYC, KLF4",inhibitor/antagonist,unclear,no,yes,"Used in cosmetics, trials for skin-lightening, not approved as a drug.",C1=CC(=CC=C1O)OC2C(C(C(C(O2)CO)O)O)O,440936.0
+Tucidinostat,"HDAC1, HDAC2, HDAC3, HDAC10, HDAC8, HDAC11",inhibitor/antagonist,HDAC inhibitor,yes,yes,Approved for use in China for certain cancers.,C1=CC(=CN=C1)C=CC(=O)NCC2=CC=C(C=C2)C(=O)NC3=C(C=C(C=C3)F)N,12136798.0
+Pexidartinib (hydrochloride),"CSF1R, KIT, FLT3",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for tenosynovial giant cell tumor in 2019.,C1=CC(=NC=C1CC2=CNC3=C2C=C(C=N3)Cl)NCC4=CN=C(C=C4)C(F)(F)F.Cl,73053710.0
+Sodium Salicylate,PTGS2,inhibitor/antagonist,Cyclooxygenase inhibitor,no,yes,"Used in studies, NSAID-related research, not approved for standard human therapy.",C1=CC=C(C(=C1)C(=O)[O-])O.[Na+],16760658.0
+Salicylic acid,,inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Used topically for acne and in aspirin synthesis.,C1=CC=C(C(=C1)C(=O)O)O,338.0
+Ataluren,CFTR,inhibitor/antagonist,unclear,yes,yes,For Duchenne muscular dystrophy with specific genetic mutation.,C1=CC=C(C(=C1)C2=NC(=NO2)C3=CC(=CC=C3)C(=O)O)F,11219835.0
+4EGI-1,EIF4E,inhibitor/antagonist,Protein synthesis inhibitor,no,no,No clinical trials found for 4EGI-1 on clinicaltrials.gov.,C1=CC=C(C(=C1)CC(=NNC2=NC(=CS2)C3=CC(=C(C=C3)Cl)Cl)C(=O)O)[N+](=O)[O-],5717952.0
+Clotrimazole,"CYP2A6, CYP51A1",inhibitor/antagonist,unclear,yes,yes,Antifungal used in topical and oral preparations.,C1=CC=C(C=C1)C(C2=CC=CC=C2)(C3=CC=CC=C3Cl)N4C=CN=C4,2812.0
+Phenytoin (sodium),,inhibitor/antagonist,unclear,yes,yes,Commonly used as an anti-seizure medication.,C1=CC=C(C=C1)C2(C(=O)NC(=N2)[O-])C3=CC=CC=C3.[Na+],23679632.0
+SBI-0640756,,inhibitor/antagonist,Protein synthesis inhibitor,no,no,No record found on clinicaltrials.gov.,C1=CC=C(C=C1)C2=C(C(=O)NC3=C2C=C(C=C3)Cl)C(=O)C=CC4=CC(=CN=C4)F,121241171.0
+Oxaprozin,"PTGS1, PTGS2, NFKB1",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Approved NSAID for arthritis treatment.,C1=CC=C(C=C1)C2=C(OC(=N2)CCC(=O)O)C3=CC=CC=C3,4614.0
+Baicalin,,activator/agonist,unclear,no,yes,"Used in traditional medicine, researched for various pharmacological effects.",C1=CC=C(C=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC4C(C(C(C(O4)C(=O)O)O)O)O)O)O,64982.0
+Belinostat,HDAC6,inhibitor/antagonist,HDAC inhibitor,yes,yes,Approved for relapsed/refractory peripheral T-cell lymphoma.,C1=CC=C(C=C1)NS(=O)(=O)C2=CC=CC(=C2)C=CC(=O)NO,6918638.0
+Carbamazepine,,inhibitor/antagonist,HDAC inhibitor,yes,yes,Used for epilepsy and neuropathic pain.,C1=CC=C2C(=C1)C=CC3=CC=CC=C3N2C(=O)N,2554.0
+HI-TOPK-032,PBK,inhibitor/antagonist,unclear,no,no,No results found on clinicaltrials.gov.,C1=CC=C2C(=C1)N=C3C(=C4C=C(C=CN4C3=N2)NC(=O)C5=CC=CS5)C#N,1936439.0
+8-Hydroxyquinoline,,unclear,unclear,no,yes,"Used in some clinical trial formulations, not approved as standalone drug.",C1=CC2=C(C(=C1)O)N=CC=C2,1923.0
+Riluzole hydrochloride,,inhibitor/antagonist,unclear,yes,yes,Used in ALS treatment.,C1=CC2=C(C=C1OC(F)(F)F)SC(=N2)N.Cl,6419992.0
+Minodronic acid,"P2RX2, P2RX3",inhibitor/antagonist,unclear,no,yes,Investigated for osteoporosis; not approved in major markets.,C1=CC2=NC=C(N2C=C1)CC(O)(P(=O)(O)O)P(=O)(O)O,130956.0
+GSK1059615,"PIK3CA, PIK3CB, PIK3CD, PIK3CG, MTOR",inhibitor/antagonist,PI3K/AKT inhibitor,no,yes,"Investigated in trials, not approved for human use.",C1=CC2=NC=CC(=C2C=C1C=C3C(=O)NC(=O)S3)C4=CC=NC=C4,23582824.0
+Gemcitabine,,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for cancer treatment like pancreatic and non-small cell lung cancer.,C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)(F)F,60750.0
+Cytarabine,,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used in chemotherapy for leukemia and other cancers.,C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)O,6253.0
+Cytarabine (hydrochloride),,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used in chemotherapy for leukemia and lymphoma.,C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)O.Cl,6252.0
+Uridine,,unclear,unclear,no,yes,"Studied in trials; not approved as standalone drug, essential body metabolite.",C1=CN(C(=O)NC1=O)C2C(C(C(O2)CO)O)O,6029.0
+Selinexor,XPO1,inhibitor/antagonist,unclear,yes,yes,Approved for certain cancer treatments.,C1=CN=C(C=N1)NNC(=O)C=CN2C=NC(=N2)C3=CC(=CC(=C3)C(F)(F)F)C(F)(F)F,71481097.0
+Furosemide,"SLC12A1, SLC12A2",inhibitor/antagonist,unclear,yes,yes,"Widely used diuretic, approved for various conditions like hypertension and edema.",C1=COC(=C1)CNC2=CC(=C(C=C2C(=O)O)S(=O)(=O)N)Cl,3440.0
+Adenosine,"ADORA1, ADORA2A, ADORA2B, ADORA3",unclear,unclear,yes,yes,Used for certain arrhythmias; approved as a drug.,C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)O)O)N,60961.0
+5-Azacytidine,DNMT1,inhibitor/antagonist,DNA methyltransferase inhibitor,yes,yes,"Approved for use in specific cancers, such as myelodysplastic syndromes.",C1=NC(=NC(=O)N1C2C(C(C(O2)CO)O)O)N,9444.0
+Clofarabine,,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for leukemia treatment in pediatric patients.,C1=NC2=C(N=C(N=C2N1C3C(C(C(O3)CO)O)F)Cl)N,119182.0
+Adenine,,unclear,unclear,no,no,Commonly found in supplements; not a drug approved by itself.,C1=NC2=NC=NC(=C2N1)N,190.0
+Allopurinol,XDH,inhibitor/antagonist,unclear,yes,yes,"Approved for gout treatment, reduces uric acid levels.",C1=NNC2=C1C(=O)NC=N2,135401907.0
+Trifluridine,,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used to treat viral infections and in cancer therapy (with tipiracil).,C1C(C(OC1N2C=C(C(=O)NC2=O)C(F)(F)F)CO)O,6256.0
+Brivudine,,unclear,unclear,yes,yes,"Approved in Europe, not widely used in the US.",C1C(C(OC1N2C=C(C(=O)NC2=O)C=CBr)CO)O,446727.0
+Idoxuridine,,unclear,DNA synthesis/repair inhibitor,yes,yes,Used as topical antiviral in eye infections. Approved for human use.,C1C(C(OC1N2C=C(C(=O)NC2=O)I)CO)O,5905.0
+Decitabine,"DNMT1, DNMT3A, DNMT3B",inhibitor/antagonist,DNA methyltransferase inhibitor,yes,yes,Approved for treatment of myelodysplastic syndromes and acute myeloid leukemia.,C1C(C(OC1N2C=NC(=NC2=O)N)CO)O,451668.0
+Lenalidomide (hemihydrate),"CRBN, IKZF1, IKZF3",inhibitor/antagonist,unclear,yes,yes,Approved for multiple myeloma and other conditions.,C1CC(=O)NC(=O)C1N2CC3=C(C2=O)C=CC=C3N.C1CC(=O)NC(=O)C1N2CC3=C(C2=O)C=CC=C3N.O,46220375.0
+DT-061,,activator/agonist,unclear,no,yes,"Investigated for oncology, no approval yet for human use.",C1CC(C(C(C1)N2C3=CC=CC=C3OC4=CC=CC=C42)O)NS(=O)(=O)C5=CC=C(C=C5)OC(F)(F)F,91885558.0
+BAY1125976,"AKT1, AKT2, AKT3",inhibitor/antagonist,PI3K/AKT inhibitor,no,yes,Cancer treatment trials but not approved for human use.,C1CC(C1)(C2=CC=C(C=C2)C3=C(N4C(=N3)C=CC(=N4)C(=O)N)C5=CC=CC=C5)N,70817911.0
+Larotrectinib,"NTRK1, NTRK2, NTRK3",inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved specifically as a cancer treatment for tumors with NTRK gene fusions.,C1CC(N(C1)C2=NC3=C(C=NN3C=C2)NC(=O)N4CCC(C4)O)C5=C(C=CC(=C5)F)F,46188928.0
+Larotrectinib sulfate,"NTRK1, NTRK2, NTRK3",inhibitor/antagonist,Other TK inhibitor,yes,yes,Larotrectinib sulfate is approved to treat TRK fusion-positive cancers.,C1CC(N(C1)C2=NC3=C(C=NN3C=C2)NC(=O)N4CCC(C4)O)C5=C(C=CC(=C5)F)F.OS(=O)(=O)O,67330085.0
+olaparib,"PARP1, PARP2",unclear,DNA synthesis/repair inhibitor,yes,yes,Approved for BRCA-mutated cancers.,C1CC1C(=O)N2CCN(CC2)C(=O)C3=C(C=CC(=C3)CC4=NNC(=O)C5=CC=CC=C54)F,23725625.0
+Filgotinib,"JAK1, JAK2, TYK2, JAK3",inhibitor/antagonist,JAK/STAT inhibitor,yes,yes,Approved in Japan and EU for rheumatoid arthritis.,C1CC1C(=O)NC2=NN3C(=N2)C=CC=C3C4=CC=C(C=C4)CN5CCS(=O)(=O)CC5,49831257.0
+ULK-101,"ULK1, ULK2",inhibitor/antagonist,unclear,no,no,No clinical trial data found on clinicaltrials.gov.,C1CC1C(C(F)(F)F)NC(=O)C2=CC(=CS2)C3=C4N=CC(=CN4N=C3)C5=CC=C(C=C5)F,137628686.0
+Oxaliplatin,,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for use in chemotherapy treatments.,C1CCC(C(C1)[NH-])[NH-].C(=O)(C(=O)O)O.[Pt+2],9887053.0
+Cilostazol,PDE3A,inhibitor/antagonist,unclear,yes,yes,Used to treat intermittent claudication associated with peripheral artery disease.,C1CCC(CC1)N2C(=NN=N2)CCCCOC3=CC4=C(C=C3)NC(=O)CC4,2754.0
+LY2090314,"GSK3B, GSK3A",inhibitor/antagonist,GSK3 inhibitor,no,yes,Investigated for Alzheimer's; not approved for any condition.,C1CCN(CC1)C(=O)N2CCN3C=C(C4=CC(=CC(=C43)C2)F)C5=C(C(=O)NC5=O)C6=CN=C7N6C=CC=C7,10029385.0
+Cobimetinib,MAP2K1,inhibitor/antagonist,MEK inhibitor,yes,yes,Approved for melanoma in combination with vemurafenib.,C1CCNC(C1)C2(CN(C2)C(=O)C3=C(C(=C(C=C3)F)F)NC4=C(C=C(C=C4)I)F)O,16222096.0
+Asciminib,ABL1,inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for chronic myeloid leukemia (CML) treatment.,C1CN(CC1O)C2=C(C=C(C=N2)C(=O)NC3=CC=C(C=C3)OC(F)(F)Cl)C4=CC=NN4,72165228.0
+Capivasertib,"AKT1, AKT2, AKT3, RPS6KB1, PRKACA, ROCK2, ROCK1",inhibitor/antagonist,PI3K/AKT inhibitor,no,yes,In clinical trials for cancer. Not yet approved for human use.,C1CN(CCC1(C(=O)NC(CCO)C2=CC=C(C=C2)Cl)N)C3=NC=NC4=C3C=CN4,25227436.0
+Penfluridol,DRD2,inhibitor/antagonist,unclear,yes,yes,Long-acting antipsychotic drug approved for human use.,C1CN(CCC1(C2=CC(=C(C=C2)Cl)C(F)(F)F)O)CCCC(C3=CC=C(C=C3)F)C4=CC=C(C=C4)F,33630.0
+Lonafarnib,"HRAS, KRAS, NRAS",inhibitor/antagonist,RAS inhibitor,yes,yes,Approved for progeria treatment in children.,C1CN(CCC1CC(=O)N2CCC(CC2)C3C4=C(CCC5=C3N=CC(=C5)Br)C=C(C=C4Br)Cl)C(=O)N,148195.0
+Pimozide,"DRD2, DRD3",inhibitor/antagonist,unclear,yes,yes,Approved antipsychotic used mainly for Tourette's syndrome and chronic schizophrenia.,C1CN(CCC1N2C3=CC=CC=C3NC2=O)CCCC(C4=CC=C(C=C4)F)C5=CC=C(C=C5)F,16362.0
+Clonidine (hydrochloride),"ADRA2A, ADRA2B, ADRA2C",activator/agonist,Adrenoceptor agonist,yes,yes,Used for hypertension and ADHD among other conditions.,C1CN=C(N1)NC2=C(C=CC=C2Cl)Cl.Cl,20179.0
+Brimonidine,"ADRA2A, ADRA2B, ADRA2C",activator/agonist,Adrenoceptor agonist,yes,yes,Used in the form of brimonidine tartrate for glaucoma treatment.,C1CN=C(N1)NC2=C(C3=NC=CN=C3C=C2)Br,2435.0
+AT7519,"CDK2, CDK4, CDK5, CDK6, CDK9, CDK1, CDK7, GSK3B",inhibitor/antagonist,CDK inhibitor,no,yes,Tested in trials for cancer treatments.,C1CNCCC1NC(=O)C2=C(C=NN2)NC(=O)C3=C(C=CC=C3Cl)Cl,11338033.0
+Hydroxyfasudil,"ROCK1, ROCK2, PRKACA",inhibitor/antagonist,unclear,no,yes,"Studied for therapeutic potential; derivative of fasudil, which is approved.",C1CNCCN(C1)S(=O)(=O)C2=CC=CC3=C2C=CNC3=O,3064778.0
+BI-78D3,,inhibitor/antagonist,Other MAPK inhibitor,no,yes,"Investigated for Alzheimer's and inflammatory diseases, not approved for human use.",C1COC2=C(O1)C=CC(=C2)N3C(=O)NN=C3SC4=NC=C(S4)[N+](=O)[O-],2747117.0
+ETC-206,,inhibitor/antagonist,Protein synthesis inhibitor,no,yes,"Investigational drug for cancer, not yet approved for human use.",C1COCCN1C(=O)C2=CC=C(C=C2)C3=CN4C(=NC=C4C5=CC=C(C=C5)C#N)C=C3,71766360.0
+LJI308,"RPS6KA1, RPS6KA3, RPS6KA2",inhibitor/antagonist,Other MAPK inhibitor,no,yes,"Investigational compound, not approved for human use as a drug.",C1COCCN1C2=CC=C(C=C2)C3=C(C=NC=C3)C4=CC(=C(C(=C4)F)O)F,118704762.0
+Bimiralisib,"PIK3CA, PIK3CB, MTOR",inhibitor/antagonist,PI3K/AKT inhibitor,no,yes,Investigational PI3K/mTOR inhibitor; not approved for human use as of 2023.,C1COCCN1C2=NC(=NC(=N2)C3=CN=C(C=C3C(F)(F)F)N)N4CCOCC4,58507717.0
+Bentamapimod,"MAPK8, MAPK9, MAPK10",inhibitor/antagonist,Other MAPK inhibitor,no,yes,Investigated for ovarian cancer; not approved for human use.,C1COCCN1CC2=CC=C(C=C2)COC3=NC=CC(=N3)C(C#N)C4=NC5=CC=CC=C5S4,10195250.0
+Lipoic acid,,unclear,unclear,yes,yes,"Approved as dietary supplement, not as a drug for specific indications.",C1CSSC1CCCCC(=O)O,6112.0
+Peretinoin,"RXRA, RXRB, RXRG",unclear,Retinoic receptor agonist,no,yes,"Studied for liver cancer, not approved for human use.",CC(=CCCC(=CCCC(=CC=CC(=CC(=O)O)C)C)C)C,6437836.0
+IQ 1,,unclear,unclear,no,yes,Investigational drug; not approved for human use yet.,CC(=O)C1=CC=C(C=C1)NN=C(C2=NC(CC3=CC=CC=C32)(C)C)C(=O)N,5823908.0
+Acetohexamide,,activator/agonist,unclear,yes,yes,"First-generation sulfonylurea, used for type 2 diabetes treatment.",CC(=O)C1=CC=C(C=C1)S(=O)(=O)NC(=O)NC2CCCCC2,1989.0
+Pentoxifylline,,inhibitor/antagonist,unclear,yes,yes,Used to improve blood flow in peripheral artery disease.,CC(=O)CCCCN1C(=O)C2=C(N=CN2C)N(C1=O)C,4740.0
+DTP3,,inhibitor/antagonist,unclear,no,yes,Currently being investigated in clinical trials in the UK.,CC(=O)NC(CC1=CC=C(C=C1)O)C(=O)NC(CCCN=C(N)N)C(=O)NC(CC2=CC=CC=C2)C(=O)N,86295191.0
+Acetazolamide,,inhibitor/antagonist,unclear,yes,yes,"Used to treat glaucoma, epilepsy, and altitude sickness since 1950s.",CC(=O)NC1=NN=C(S1)S(=O)(=O)N,1986.0
+Pasireotide (acetate),"SSTR1, SSTR2, SSTR3, SSTR5",activator/agonist,unclear,yes,yes,Approved for Cushing's disease and acromegaly.,CC(=O)O.C1C(CN2C1C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C2=O)CC3=CC=CC=C3)CC4=CC=C(C=C4)OCC5=CC=CC=C5)CCCCN)CC6=CNC7=CC=CC=C76)C8=CC=CC=C8)OC(=O)NCCN,72205932.0
+Chlorhexidine (diacetate),,unclear,unclear,yes,yes,Used as antiseptic and disinfectant. Approved for human use.,CC(=O)O.CC(=O)O.C1=CC(=CC=C1NC(=NC(=NCCCCCCN=C(N)N=C(N)NC2=CC=C(C=C2)Cl)N)N)Cl,9562059.0
+Aspirin,"PTGS1, PTGS2",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Used widely for pain relief and anti-inflammatory purposes.,CC(=O)OC1=CC=CC=C1C(=O)O,2244.0
+Abiraterone acetate,CYP17A1,inhibitor/antagonist,unclear,yes,yes,Approved for prostate cancer treatment.,CC(=O)OC1CCC2(C3CCC4(C(C3CC=C2C1)CC=C4C5=CN=CC=C5)C)C,9821849.0
+Sivelestat (sodium tetrahydrate),ELANE,inhibitor/antagonist,unclear,no,yes,"Approved in Japan, not approved in US/EU.",CC(C)(C)C(=O)OC1=CC=C(C=C1)S(=O)(=O)NC2=CC=CC=C2C(=O)NCC(=O)[O-].O.O.O.O.[Na+],23663985.0
+Atazanavir (sulfate),CYP3A4,inhibitor/antagonist,unclear,yes,yes,"Antiretroviral, approved for HIV treatment.",CC(C)(C)C(C(=O)NC(CC1=CC=CC=C1)C(CN(CC2=CC=C(C=C2)C3=CC=CC=N3)NC(=O)C(C(C)(C)C)NC(=O)OC)O)NC(=O)OC.OS(=O)(=O)O,158550.0
+Terfenadine,HRH1,inhibitor/antagonist,unclear,no,yes,Withdrawn due to cardiac toxicity; replaced by fexofenadine.,CC(C)(C)C1=CC=C(C=C1)C(CCCN2CCC(CC2)C(C3=CC=CC=C3)(C4=CC=CC=C4)O)O,5405.0
+Bosentan (hydrate),"EDNRA, EDNRB",inhibitor/antagonist,unclear,yes,yes,Approved for treating pulmonary arterial hypertension.,CC(C)(C)C1=CC=C(C=C1)S(=O)(=O)NC2=C(C(=NC(=N2)C3=NC=CC=N3)OCCO)OC4=CC=CC=C4OC.O,185462.0
+Dabrafenib,"BRAF, RAF1",inhibitor/antagonist,RAF inhibitor,yes,yes,Approved for melanoma treatment.,CC(C)(C)C1=NC(=C(S1)C2=NC(=NC=C2)N)C3=C(C(=CC=C3)NS(=O)(=O)C4=C(C=CC=C4F)F)F,44462760.0
+Ralimetinib dimesylate,"MAPKAPK2, MAPK14, MAPK11",inhibitor/antagonist,Other MAPK inhibitor,no,yes,Investigated as cancer treatment; not approved for human use.,CC(C)(C)CN1C2=C(C=CC(=N2)C3=C(N=C(N3)C(C)(C)C)C4=CC=C(C=C4)F)N=C1N.CS(=O)(=O)O.CS(=O)(=O)O,11570805.0
+Saquinavir,,inhibitor/antagonist,unclear,yes,yes,Approved as part of antiretroviral therapy for HIV/AIDS.,CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(C(CC3=CC=CC=C3)NC(=O)C(CC(=O)N)NC(=O)C4=NC5=CC=CC=C5C=C4)O,441243.0
+Pentagastrin,CCKBR,inhibitor/antagonist,unclear,yes,yes,Used mainly in diagnostic tests for gastric functions.,CC(C)(C)OC(=O)NCCC(=O)NC(CC1=CNC2=CC=CC=C21)C(=O)NC(CCSC)C(=O)NC(CC(=O)O)C(=O)NC(CC3=CC=CC=C3)C(=O)N,9853654.0
+Anastrozole,CYP19A1,inhibitor/antagonist,unclear,yes,yes,Used to treat breast cancer in postmenopausal women.,CC(C)(C#N)C1=CC(=CC(=C1)CN2C=NC=N2)C(C)(C)C#N,2187.0
+Harringtonine,,unclear,Protein synthesis inhibitor,no,yes,"Investigated in trials mainly for cancer treatment, often used as basis for derivatives.",CC(C)(CCC(CC(=O)OC)(C(=O)OC1C2C3=CC4=C(C=C3CCN5C2(CCC5)C=C1OC)OCO4)O)O,276389.0
+Homoharringtonine,,inhibitor/antagonist,Protein synthesis inhibitor,yes,yes,"Used in leukemia treatment, also known as Omacetaxine.",CC(C)(CCCC(CC(=O)OC)(C(=O)OC1C2C3=CC4=C(C=C3CCN5C2(CCC5)C=C1OC)OCO4)O)O,285033.0
+Flutamide,AR,inhibitor/antagonist,Androgen receptor antagonist,yes,yes,Used to treat prostate cancer as an antiandrogen.,CC(C)C(=O)NC1=CC(=C(C=C1)[N+](=O)[O-])C(F)(F)F,3397.0
+Thymopentin,,unclear,unclear,no,yes,In clinical trials for immune deficiency and autoimmune diseases.,CC(C)C(C(=O)NC(CC1=CC=C(C=C1)O)C(=O)O)NC(=O)C(CC(=O)O)NC(=O)C(CCCCN)NC(=O)C(CCCN=C(N)N)N,451417.0
+Aliskiren,REN,inhibitor/antagonist,unclear,yes,yes,Renin inhibitor for hypertension. Approved in the US and EU.,CC(C)C(CC1=CC(=C(C=C1)OC)OCCCOC)CC(C(CC(C(C)C)C(=O)NCC(C)(C)C(=O)N)O)N,5493444.0
+Verapamil,"CYP3A4, ABCB1",inhibitor/antagonist,unclear,yes,yes,Used as a racemic mixture for hypertension and angina.,CC(C)C(CCCN(C)CCC1=CC(=C(C=C1)OC)OC)(C#N)C2=CC(=C(C=C2)OC)OC,2520.0
+(R)-Verapamil (hydrochloride),ABCB1,inhibitor/antagonist,unclear,no,yes,"Racemic verapamil is approved, but not specifically (R)-enantiomer alone.",CC(C)C(CCCN(C)CCC1=CC(=C(C=C1)OC)OC)(C#N)C2=CC(=C(C=C2)OC)OC.Cl,170014.0
+Ritonavir,,inhibitor/antagonist,unclear,yes,yes,Used in combination HIV therapies.,CC(C)C1=NC(=CS1)CN(C)C(=O)NC(C(C)C)C(=O)NC(CC2=CC=CC=C2)CC(C(CC3=CC=CC=C3)NC(=O)OCC4=CN=CS4)O,392622.0
+Goserelin (acetate),GNRHR,activator/agonist,unclear,yes,yes,It's approved for prostate and breast cancer treatment.,CC(C)CC(C(=O)NC(CCCN=C(N)N)C(=O)N1CCCC1C(=O)NNC(=O)N)NC(=O)C(COC(C)(C)C)NC(=O)C(CC2=CC=C(C=C2)O)NC(=O)C(CO)NC(=O)C(CC3=CNC4=CC=CC=C43)NC(=O)C(CC5=CN=CN5)NC(=O)C6CCC(=O)N6.CC(=O)O,16052011.0
+Bestatin,ANPEP,inhibitor/antagonist,unclear,no,yes,Studied in trials; not approved for human therapeutic use.,CC(C)CC(C(=O)O)NC(=O)C(C(CC1=CC=CC=C1)N)O,72172.0
+Bestatin (hydrochloride),,inhibitor/antagonist,unclear,no,yes,Investigated in clinical trials but not approved for human use.,CC(C)CC(C(=O)O)NC(=O)C(C(CC1=CC=CC=C1)N)O.Cl,11957481.0
+Imiquimod (maleate),TLR7,activator/agonist,unclear,yes,yes,"Approved for skin conditions; imiquimod itself, not specifically maleate salt.",CC(C)CN1C=NC2=C1C3=CC=CC=C3N=C2N.C(=CC(=O)O)C(=O)O,11595577.0
+Imiquimod (hydrochloride),TLR7,activator/agonist,unclear,yes,yes,Approved for topical treatment of skin conditions like actinic keratosis.,CC(C)CN1C=NC2=C1C3=CC=CC=C3N=C2N.Cl,13982876.0
+Encorafenib,BRAF,inhibitor/antagonist,RAF inhibitor,yes,yes,Approved for use in BRAF-mutant melanoma.,CC(C)N1C=C(C(=N1)C2=C(C(=CC(=C2)Cl)NS(=O)(=O)C)F)C3=NC(=NC=C3)NCC(C)NC(=O)OC,50922675.0
+AZD1390,ATM,inhibitor/antagonist,unclear,no,yes,"Investigational ATM kinase inhibitor in clinical trials, not approved for human use.",CC(C)N1C2=C(C=NC3=CC(=C(C=C32)C4=CN=C(C=C4)OCCCN5CCCCC5)F)N(C1=O)C,126689157.0
+Sapanisertib,MTOR,inhibitor/antagonist,MTOR inhibitor,no,yes,"Investigational mTOR inhibitor, not approved yet but studied for cancer treatment.",CC(C)N1C2=NC=NC(=C2C(=N1)C3=CC4=C(C=C3)OC(=N4)N)N,45375953.0
+Torkinib,"MTOR, PDGFRA, PRKDC, PIK3CD, PIK3CG, PIK3CA, PIK3CB, HCK, SRC, KDR, ABL1, EPHB4, EGFR",inhibitor/antagonist,MTOR inhibitor,no,yes,In clinical trials for cancer treatment but not yet approved.,CC(C)N1C2=NC=NC(=C2C(=N1)C3=CC4=C(N3)C=CC(=C4)O)N,135565635.0
+Belumosudil,"ROCK2, ROCK1",inhibitor/antagonist,unclear,yes,yes,Approved for chronic graft-versus-host disease in the US.,CC(C)NC(=O)COC1=CC=CC(=C1)C2=NC3=CC=CC=C3C(=N2)NC4=CC5=C(C=C4)NN=C5,11950170.0
+Belumosudil (mesylate),"ROCK2, ROCK1",inhibitor/antagonist,unclear,yes,yes,Approved for chronic graft-versus-host disease.,CC(C)NC(=O)COC1=CC=CC(=C1)C2=NC3=CC=CC=C3C(=N2)NC4=CC5=C(C=C4)NN=C5.CS(=O)(=O)O,146681181.0
+Esmolol (hydrochloride),ADRB1,inhibitor/antagonist,unclear,yes,yes,Used as a beta-1 blocker for acute heart issues.,CC(C)NCC(COC1=CC=C(C=C1)CCC(=O)OC)O.Cl,104769.0
+Erdafitinib,"FGFR1, FGFR2, FGFR3, FGFR4",inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for bladder cancer treatment.,CC(C)NCCN(C1=CC2=NC(=CN=C2C=C1)C3=CN(N=C3)C)C4=CC(=CC(=C4)OC)OC,67462786.0
+Malotilate,ALOX5,inhibitor/antagonist,unclear,no,yes,"Investigated, but not approved for human use.",CC(C)OC(=O)C(=C1SC=CS1)C(=O)OC(C)C,4006.0
+Fenofibrate,"CYP2C19, CYP2B6, CYP2C9, CYP2C8, CYP3A4, PPARA",unclear,unclear,yes,yes,Fenofibrate is approved for human use in treating hypercholesterolemia.,CC(C)OC(=O)C(C)(C)OC1=CC=C(C=C1)C(=O)C2=CC=C(C=C2)Cl,3339.0
+MK-8353,"MAPK3, MAPK1",inhibitor/antagonist,Other MAPK inhibitor,no,yes,Investigated for cancer treatment in clinical trials.,CC(C)OC1=NC=C(C=C1)C2=NNC3=C2C=C(C=C3)NC(=O)C4(CCN(C4)CC(=O)N5CCC(=CC5)C6=CC=C(C=C6)C7=NN(C=N7)C)SC,58282870.0
+crizotinib,"ALK, MET, ROS1",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for NSCLC treatment.,CC(C1=C(C=CC(=C1Cl)F)Cl)OC2=C(N=CC(=C2)C3=CN(N=C3)C4CCNCC4)N,11626560.0
+(S)-Crizotinib,NUDT1,inhibitor/antagonist,unclear,no,yes,"Racemic mixture Crizotinib is approved, not specific enantiomer.",CC(C1=C(C=CC(=C1Cl)F)Cl)OC2=C(N=CC(=C2)C3=CN(N=C3)C4CCNCC4)N,56671814.0
+Crizotinib (hydrochloride),"ALK, MET, ROS1",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for ALK-positive NSCLC treatment.,CC(C1=C(C=CC(=C1Cl)F)Cl)OC2=C(N=CC(=C2)C3=CN(N=C3)C4CCNCC4)N.Cl,71576688.0
+Aprepitant,TACR1,inhibitor/antagonist,unclear,yes,yes,Aprepitant is approved for preventing chemotherapy-induced nausea and vomiting.,CC(C1=CC(=CC(=C1)C(F)(F)F)C(F)(F)F)OC2C(N(CCO2)CC3=NNC(=O)N3)C4=CC=C(C=C4)F,135413536.0
+Cinacalcet,CASR,activator/agonist,unclear,yes,yes,Used to treat secondary hyperparathyroidism and parathyroid carcinoma.,CC(C1=CC=CC2=CC=CC=C21)NCCCC3=CC(=CC=C3)C(F)(F)F,156419.0
+Naproxen,"PTGS1, PTGS2",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Used as non-prescription NSAID in many countries.,CC(C1=CC2=C(C=C1)C=C(C=C2)OC)C(=O)O,156391.0
+Zileuton,ALOX5,inhibitor/antagonist,unclear,yes,yes,Approved for asthma treatment; 5-lipoxygenase inhibitor.,CC(C1=CC2=CC=CC=C2S1)N(C(=O)N)O,60490.0
+Voriconazole,,inhibitor/antagonist,unclear,yes,yes,Approved for treating invasive fungal infections.,CC(C1=NC=NC=C1F)C(CN2C=NC=N2)(C3=C(C=C(C=C3)F)F)O,71616.0
+Carbidopa (monohydrate),AHR,inhibitor/antagonist,unclear,yes,yes,Used in combination with levodopa for Parkinson's treatment.,CC(CC1=CC(=C(C=C1)O)O)(C(=O)O)NN,2563.0
+Silodosin,"ADRA1A, ADRA1B, ADRA1D",inhibitor/antagonist,unclear,yes,yes,Approved for benign prostatic hyperplasia treatment.,CC(CC1=CC2=C(C(=C1)C(=O)N)N(CC2)CCCO)NCCOC3=CC=CC=C3OCC(F)(F)F,5312125.0
+Darolutamide,AR,inhibitor/antagonist,Androgen receptor antagonist,yes,yes,Approved for treating non-metastatic castration-resistant prostate cancer.,CC(CN1C=CC(=N1)C2=CC(=C(C=C2)C#N)Cl)NC(=O)C3=NNC(=C3)C(C)O,67171867.0
+Benproperine (phosphate),ARPC2,inhibitor/antagonist,unclear,yes,yes,Studied as a cough suppressant; not widely approved.,CC(COC1=CC=CC=C1CC2=CC=CC=C2)N3CCCCC3.OP(=O)(O)O,167811.0
+Bicalutamide,AR,inhibitor/antagonist,Androgen receptor antagonist,yes,yes,Approved as antiandrogen for prostate cancer treatment.,CC(CS(=O)(=O)C1=CC=C(C=C1)F)(C(=O)NC2=CC(=C(C=C2)C#N)C(F)(F)F)O,2375.0
+Captopril,ACE,inhibitor/antagonist,unclear,yes,yes,First ACE inhibitor approved for hypertension and heart failure.,CC(CS)C(=O)N1CCCC1C(=O)O,44093.0
+Tirabrutinib,BTK,inhibitor/antagonist,Other TK inhibitor,no,yes,"In clinical trials, not approved for human use yet.",CC#CC(=O)N1CCC(C1)N2C3=NC=NC(=C3N(C2=O)C4=CC=C(C=C4)OC5=CC=CC=C5)N,54755438.0
+Tirabrutinib (hydrochloride),BTK,inhibitor/antagonist,Other TK inhibitor,no,yes,Not approved in US/EU; used investigationally in some regions.,CC#CC(=O)N1CCC(C1)N2C3=NC=NC(=C3N(C2=O)C4=CC=C(C=C4)OC5=CC=CC=C5)N.Cl,71571562.0
+Mifepristone,"NR3C1, PGR",inhibitor/antagonist,unclear,yes,yes,Approved for medical abortion and Cushing's syndrome treatment.,CC#CC1(CCC2C1(CC(C3=C4CCC(=O)C=C4CCC23)C5=CC=C(C=C5)N(C)C)C)O,55245.0
+Fostamatinib (disodium hexahydrate),"SYK, FLT3, LYN, LCK",inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for treatment of chronic immune thrombocytopenia in adults.,CC1(C(=O)N(C2=C(O1)C=CC(=N2)NC3=NC(=NC=C3F)NC4=CC(=C(C(=C4)OC)OC)OC)COP(=O)([O-])[O-])C.O.O.O.O.O.O.[Na+].[Na+],146673142.0
+Temuterkib,,inhibitor/antagonist,Other MAPK inhibitor,no,yes,Temuterkib is in clinical trials for cancer treatment.,CC1(C2=C(C=C(S2)C3=NC(=NC=C3)NC4=CC=NN4C)C(=O)N1CCN5CCOCC5)C,121408882.0
+Tetracycline (hydrochloride),,unclear,unclear,yes,yes,Approved antibiotic often used as tetracycline hydrochloride.,CC1(C2CC3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O.Cl,54704426.0
+Glycyrrhizic acid,,inhibitor/antagonist,unclear,no,yes,"Tested for therapeutic effects, not approved for human use.",CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C,14982.0
+Diammonium Glycyrrhizinate,,unclear,unclear,no,yes,Used in trials for hepatitis. Not approved for general human use.,CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C.N.N,656656.0
+venetoclax,BCL2,inhibitor/antagonist,unclear,yes,yes,Approved for chronic lymphocytic leukemia and other cancers.,CC1(CCC(=C(C1)C2=CC=C(C=C2)Cl)CN3CCN(CC3)C4=CC(=C(C=C4)C(=O)NS(=O)(=O)C5=CC(=C(C=C5)NCC6CCOCC6)[N+](=O)[O-])OC7=CN=C8C(=C7)C=CN8)C,49846579.0
+Delamanid,,inhibitor/antagonist,unclear,yes,yes,Approved for MDR-TB treatment.,CC1(CN2C=C(N=C2O1)[N+](=O)[O-])COC3=CC=C(C=C3)N4CCC(CC4)OC5=CC=C(C=C5)OC(F)(F)F,6480466.0
+Dexmedetomidine,"ADRA2A, ADRA2B, ADRA2C",activator/agonist,Adrenoceptor agonist,yes,yes,Approved as sedative and analgesic.,CC1=C(C(=CC=C1)C(C)C2=CN=CN2)C,5311068.0
+Ranolazine,,inhibitor/antagonist,unclear,yes,yes,Approved for treating chronic angina.,CC1=C(C(=CC=C1)C)NC(=O)CN2CCN(CC2)CC(COC3=CC=CC=C3OC)O,56959.0
+Lopinavir,,inhibitor/antagonist,unclear,yes,yes,Combined with ritonavir for HIV treatment. Approved for human use.,CC1=C(C(=CC=C1)C)OCC(=O)NC(CC2=CC=CC=C2)C(CC(CC3=CC=CC=C3)NC(=O)C(C(C)C)N4CCCNC4=O)O,92727.0
+Valdecoxib,PTGS2,inhibitor/antagonist,Cyclooxygenase inhibitor,no,yes,Withdrawn due to safety concerns related to cardiovascular risks.,CC1=C(C(=NO1)C2=CC=CC=C2)C3=CC=C(C=C3)S(=O)(=O)N,119607.0
+Cloxacillin (sodium),,inhibitor/antagonist,unclear,yes,yes,Approved as a penicillinase-resistant antibiotic for human use.,CC1=C(C(=NO1)C2=CC=CC=C2Cl)C(=O)NC3C4N(C3=O)C(C(S4)(C)C)C(=O)[O-].[Na+],23675320.0
+Elagolix sodium,GNRHR,inhibitor/antagonist,unclear,yes,yes,Approved for endometriosis pain in women.,CC1=C(C(=O)N(C(=O)N1CC2=C(C=CC=C2F)C(F)(F)F)CC(C3=CC=CC=C3)NCCCC(=O)[O-])C4=C(C(=CC=C4)OC)F.[Na+],24785956.0
+palbociclib,"CDK4, CDK6",inhibitor/antagonist,CDK inhibitor,yes,yes,Approved for human use as a cancer treatment.,CC1=C(C(=O)N(C2=NC(=NC=C12)NC3=NC=C(C=C3)N4CCNCC4)C5CCCC5)C(=O)C,5330286.0
+Retinoic acid,"RARB, RARG, RARA, PPARD",activator/agonist,Retinoic receptor agonist,yes,yes,Approved for acne and leukemia treatment.,CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CC(=O)O)C)C,444795.0
+PH-797804,MAPK14,inhibitor/antagonist,Other MAPK inhibitor,no,yes,"Investigated as an anti-inflammatory agent, not approved for human use.",CC1=C(C=C(C=C1)C(=O)NC)N2C(=CC(=C(C2=O)Br)OCC3=C(C=C(C=C3)F)F)C,22049997.0
+Ponatinib,"ABL1, PDGFRA, KDR, FGFR1, SRC, KIT",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for treatment of certain types of leukemia.,CC1=C(C=C(C=C1)C(=O)NC2=CC(=C(C=C2)CN3CCN(CC3)C)C(F)(F)F)C#CC4=CN=C5N4N=CC=C5,24826799.0
+Radotinib,ABL1,inhibitor/antagonist,Other TK inhibitor,no,yes,"Tested for chronic myeloid leukemia, not approved in major markets.",CC1=C(C=C(C=C1)C(=O)NC2=CC(=CC(=C2)C(F)(F)F)N3C=C(N=C3)C)NC4=NC=CC(=N4)C5=NC=CN=C5,16063245.0
+NVP-BHG712,EPHB4,inhibitor/antagonist,unclear,no,yes,Investigated as angiogenesis inhibitor; not approved for human use.,CC1=C(C=C(C=C1)C(=O)NC2=CC=CC(=C2)C(F)(F)F)NC3=C4C=NN(C4=NC(=N3)C5=CN=CC=C5)C,16747388.0
+Canagliflozin,SLC5A2,inhibitor/antagonist,Glucose transporter inhibitor,yes,yes,Approved for type 2 diabetes treatment.,CC1=C(C=C(C=C1)C2C(C(C(C(O2)CO)O)O)O)CC3=CC=C(S3)C4=CC=C(C=C4)F,24812758.0
+MK-3903,PRKAA1,activator/agonist,unclear,no,yes,"Investigated for NASH, not yet approved for human use.",CC1=C(C=C(C=C1)OC2=NC3=C(N2)C=C(C(=C3)C4=CC=C(C=C4)C5=CC=CC=C5)Cl)C(=O)O,45256689.0
+EX229,PRKAA1,activator/agonist,unclear,no,no,No clinical trial information found on clinicaltrials.gov.,CC1=C(C=C(C=C1)OC2=NC3=C(N2)C=C(C(=C3)C4=CC5=C(C=C4)N(C=C5)C)Cl)C(=O)O,45256693.0
+Flumatinib (mesylate),ABL1,inhibitor/antagonist,Other TK inhibitor,no,yes,Used in trials for chronic myeloid leukemia.,CC1=C(C=C(C=N1)NC(=O)C2=CC(=C(C=C2)CN3CCN(CC3)C)C(F)(F)F)NC4=NC=CC(=N4)C5=CN=CC=C5.CS(=O)(=O)O,46910592.0
+Tucatinib,ERBB2,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for human use in advanced HER2-positive breast cancer.,CC1=C(C=CC(=C1)NC2=NC=NC3=C2C=C(C=C3)NC4=NC(CO4)(C)C)OC5=CC6=NC=NN6C=C5,51039094.0
+Trimetrexate,DHFR,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used with leucovorin for treating certain types of pneumonia.,CC1=C(C=CC2=C1C(=NC(=N2)N)N)CNC3=CC(=C(C(=C3)OC)OC)OC,5583.0
+APTO-253,"MYC, KLF4",unclear,unclear,no,yes,"Investigated for cancer, but development discontinued.",CC1=C(C2=C(N1)C=CC(=C2)F)C3=NC4=C5C=CC=NC5=C6C(=C4N3)C=CC=N6,11960271.0
+Vitamin K4,,unclear,unclear,no,yes,Investigated in a clinical trial in Egypt.,CC1=C(C2=CC=CC=C2C(=C1)OC(=O)C)OC(=O)C,11310.0
+Panobinostat,"HDAC1, HDAC2, HDAC3, HDAC6, HDAC8, HDAC10, HDAC11",inhibitor/antagonist,HDAC inhibitor,yes,yes,Approved for multiple myeloma treatment.,CC1=C(C2=CC=CC=C2N1)CCNCC3=CC=C(C=C3)C=CC(=O)NO,6918837.0
+Rimonabant,CNR1,inhibitor/antagonist,unclear,no,yes,Withdrawn due to psychiatric side effects.,CC1=C(N(N=C1C(=O)NN2CCCCC2)C3=C(C=C(C=C3)Cl)Cl)C4=CC=C(C=C4)Cl,104850.0
+Rimonabant (Hydrochloride),CNR1,inhibitor/antagonist,unclear,no,yes,"Withdrawn due to psychiatric side effects, once used as anti-obesity drug.",CC1=C(N(N=C1C(=O)NN2CCCCC2)C3=C(C=C(C=C3)Cl)Cl)C4=CC=C(C=C4)Cl.Cl,104849.0
+Ligustrazine,,unclear,unclear,no,yes,"Mainly used in traditional Chinese medicine, limited human trials exist.",CC1=C(N=C(C(=N1)C)C)C,14296.0
+Sulfisoxazole,"EDNRA, EDNRB",inhibitor/antagonist,unclear,yes,yes,Discontinued in U.S.; previously used for bacterial infections.,CC1=C(ON=C1C)NS(=O)(=O)C2=CC=C(C=C2)N,5344.0
+Alpelisib,PIK3CA,inhibitor/antagonist,PI3K/AKT inhibitor,yes,yes,Approved for HR+/HER2- advanced breast cancer in combination with fulvestrant.,CC1=C(SC(=N1)NC(=O)N2CCCC2C(=O)N)C3=CC(=NC=C3)C(C)(C)C(F)(F)F,56649450.0
+Trametinib,"MAP2K1, MAP2K2",inhibitor/antagonist,MEK inhibitor,yes,yes,Approved for melanoma treatment.,CC1=C2C(=C(N(C1=O)C)NC3=C(C=C(C=C3)I)F)C(=O)N(C(=O)N2C4=CC=CC(=C4)NC(=O)C)C5CC5,11707110.0
+Nevirapine,,inhibitor/antagonist,unclear,yes,yes,Antiretroviral for HIV treatment approved for human use.,CC1=C2C(=NC=C1)N(C3=C(C=CC=N3)C(=O)N2)C4CC4,4463.0
+Tomivosertib,,inhibitor/antagonist,Protein synthesis inhibitor,no,yes,In clinical trials for cancer; not FDA approved for human use yet.,CC1=C2C(=O)NC3(N2C(=O)C(=C1)NC4=NC=NC(=C4)N)CCCCC3,118598754.0
+Paclitaxel,,unclear,Microtubule inhibitor,yes,yes,Chemotherapy drug approved for cancer treatment.,CC1=C2C(C(=O)C3(C(CC4C(C3C(C(C2(C)C)(CC1OC(=O)C(C(C5=CC=CC=C5)NC(=O)C6=CC=CC=C6)O)O)OC(=O)C7=CC=CC=C7)(CO4)OC(=O)C)O)C)OC(=O)C,36314.0
+Docetaxel,,inhibitor/antagonist,Microtubule inhibitor,yes,yes,"Approved anticancer drug, often used in chemotherapy treatments.",CC1=C2C(C(=O)C3(C(CC4C(C3C(C(C2(C)C)(CC1OC(=O)C(C(C5=CC=CC=C5)NC(=O)OC(C)(C)C)O)O)OC(=O)C6=CC=CC=C6)(CO4)OC(=O)C)O)C)O,148124.0
+Docetaxel (Trihydrate),"TUBB1, TUBB3, TUBB4B, TUBB4A, TUBB2A, TUBB2B",unclear,Microtubule inhibitor,yes,yes,"Approved cancer treatment, commonly used in chemotherapy.",CC1=C2C(C(=O)C3(C(CC4C(C3C(C(C2(C)C)(CC1OC(=O)C(C(C5=CC=CC=C5)NC(=O)OC(C)(C)C)O)O)OC(=O)C6=CC=CC=C6)(CO4)OC(=O)C)O)C)O.O.O.O,148123.0
+Roxadustat,,inhibitor/antagonist,unclear,yes,yes,"Approved for anemia treatment in some countries, e.g., China, Japan.",CC1=C2C=C(C=CC2=C(C(=N1)C(=O)NCC(=O)O)O)OC3=CC=CC=C3,11256664.0
+Thymol,TRPA1,activator/agonist,unclear,no,yes,Used in clinical trials as antiseptic and antifungal.,CC1=CC(=C(C=C1)C(C)C)O,6989.0
+Gemfibrozil,"PPARA, CYP2C9, CYP2C19, CYP2C8, CYP1A2",unclear,unclear,yes,yes,Approved for dyslipidemia treatment.,CC1=CC(=C(C=C1)C)OCCCC(C)(C)C(=O)O,3463.0
+Vortioxetine,"SLC6A4, HTR3A, HTR7",unclear,unclear,yes,yes,Approved for major depressive disorder.,CC1=CC(=C(C=C1)SC2=CC=CC=C2N3CCNCC3)C,9966051.0
+OTS514,MAP3K8,inhibitor/antagonist,Other MAPK inhibitor,no,yes,Investigational drug in preclinical and early phase clinical trials.,CC1=CC(=C(C2=C1NC(=O)C3=C2C=CS3)C4=CC=C(C=C4)C(C)CN)O,67448836.0
+Pralsetinib,RET,inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for RET fusion-positive cancers.,CC1=CC(=NN1)NC2=NC(=NC(=C2)C)C3CCC(CC3)(C(=O)NC(C)C4=CN=C(C=C4)N5C=C(C=N5)F)OC,129073603.0
+Menadione,,unclear,unclear,no,yes,"Used in trials; a vitamin K analog, not fully approved for human use.",CC1=CC(=O)C2=CC=CC=C2C1=O,4055.0
+Ciclopirox,,unclear,unclear,yes,yes,"Approved for antifungal use, primarily in nail and skin treatments.",CC1=CC(=O)N(C(=C1)C2CCCCC2)O,2749.0
+Methylthiouracil,,unclear,unclear,no,yes,"Used in research, not approved for human therapeutic use.",CC1=CC(=O)NC(=S)N1,667493.0
+Tolcapone,COMT,inhibitor/antagonist,unclear,yes,yes,"Used in Parkinson's treatment, subject to liver monitoring.",CC1=CC=C(C=C1)C(=O)C2=CC(=C(C(=C2)O)O)[N+](=O)[O-],4659569.0
+Tolmetin,"PTGS1, PTGS2",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Approved NSAID for pain and inflammation.,CC1=CC=C(C=C1)C(=O)C2=CC=C(N2C)CC(=O)O,5509.0
+Celecoxib,PTGS2,inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Used for arthritis pain and inflammation; approved NSAID.,CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F,2662.0
+S-Adenosyl-L-methionine (disulfate tosylate),,unclear,unclear,yes,yes,Used as dietary supplement; approved in some countries for depression treatment.,CC1=CC=C(C=C1)S(=O)(=O)O.C[S+](CCC(C(=O)O)N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O.OS(=O)(=O)O.OS(=O)(=O)[O-],9875462.0
+Lapatinib ditosylate,"EGFR, ERBB2",inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for use in breast cancer treatment.,CC1=CC=C(C=C1)S(=O)(=O)O.CC1=CC=C(C=C1)S(=O)(=O)O.CS(=O)(=O)CCNCC1=CC=C(O1)C2=CC3=C(C=C2)N=CN=C3NC4=CC(=C(C=C4)OCC5=CC(=CC=C5)F)Cl.O,11557040.0
+LY-2584702 (tosylate salt),RPS6KB1,inhibitor/antagonist,MTOR inhibitor,no,yes,Investigated in clinical trials for cancer treatment. Not approved for human use.,CC1=CC=C(C=C1)S(=O)(=O)O.CN1C=C(N=C1C2CCN(CC2)C3=NC=NC4=C3C=NN4)C5=CC(=C(C=C5)F)C(F)(F)F,46205871.0
+Edoxaban (tosylate monohydrate),F10,inhibitor/antagonist,unclear,yes,yes,Approved as an anticoagulant for preventing stroke and blood clots.,CC1=CC=C(C=C1)S(=O)(=O)O.CN1CCC2=C(C1)SC(=N2)C(=O)NC3CC(CCC3NC(=O)C(=O)NC4=NC=C(C=C4)Cl)C(=O)N(C)C.O,25022378.0
+Lumateperone (tosylate),"HTR2A, DRD2",unclear,unclear,yes,yes,Approved for schizophrenia; marketed as Caplyta.,CC1=CC=C(C=C1)S(=O)(=O)O.CN1CCN2C3CCN(CC3C4=C2C1=CC=C4)CCCC(=O)C5=CC=C(C=C5)F,44241743.0
+Mozavaptan,AVPR2,inhibitor/antagonist,unclear,no,yes,In trials for conditions like hyponatremia but not approved for use.,CC1=CC=CC=C1C(=O)NC2=CC=C(C=C2)C(=O)N3CCCC(C4=CC=CC=C43)N(C)C,119369.0
+Bexarotene,"RXRA, RXRB, RXRG",activator/agonist,Retinoic receptor agonist,yes,yes,Approved for treating cutaneous T-cell lymphoma.,CC1=CC2=C(C=C1C(=C)C3=CC=C(C=C3)C(=O)O)C(CCC2(C)C)(C)C,82146.0
+Sulfatinib,"FLT1, KDR, FLT4, FGFR1, CSF1R",inhibitor/antagonist,Multi-TK inhibitor,no,yes,"Investigated in trials for neuroendocrine tumors, not yet approved for use.",CC1=CC2=C(N1)C=CC(=C2)OC3=NC(=NC=C3)NC4=CC=CC(=C4)CS(=O)(=O)NCCN(C)C,52920501.0
+Olanzapine,"HTR2A, HTR2C, DRD2, DRD4, ADRA1A, ADRA1B, ADRA1D, HTR6, CHRM1, CHRM2, CHRM3, CHRM4, CHRM5",inhibitor/antagonist,unclear,yes,yes,Olanzapine is used in treatment of schizophrenia and bipolar disorder.,CC1=CC2=C(S1)NC3=CC=CC=C3N=C2N4CCN(CC4)C,135398745.0
+AZD-7648,PRKDC,inhibitor/antagonist,DNA synthesis/repair inhibitor,no,yes,"Inhibitor studied for DNA repair, not yet approved for human use.",CC1=CC2=NC=NN2C=C1NC3=NC=C4C(=N3)N(C(=O)N4C)C5CCOCC5,135151360.0
+Megestrol,,unclear,unclear,yes,yes,Used for appetite loss and weight gain in cancer/AIDS patients.,CC1=CC2C(CCC3(C2CCC3(C(=O)C)O)C)C4(C1=CC(=O)CC4)C,19090.0
+Omeprazole (sodium),,inhibitor/antagonist,unclear,yes,yes,Approved in salt form as acid reflux treatment.,CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C([N-]2)C=C(C=C3)OC.[Na+],12108541.0
+Omeprazole,,inhibitor/antagonist,unclear,yes,yes,Used as part of racemic mixture for acid-related conditions.,CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C(N2)C=C(C=C3)OC,4594.0
+Fedratinib (hydrochloride hydrate),"JAK2, FLT3, RET",inhibitor/antagonist,JAK/STAT inhibitor,yes,yes,Approved for treatment of myelofibrosis.,CC1=CN=C(N=C1NC2=CC(=CC=C2)S(=O)(=O)NC(C)(C)C)NC3=CC=C(C=C3)OCCN4CCCC4.O.Cl.Cl,67517580.0
+Meloxicam,"PTGS1, PTGS2",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Meloxicam is an approved NSAID for pain and inflammation.,CC1=CN=C(S1)NC(=O)C2=C(C3=CC=CC=C3S(=O)(=O)N2C)O,54677470.0
+Pyridoxine,,unclear,unclear,yes,yes,Vitamin B6; essential nutrient approved for various health conditions.,CC1=NC=C(C(=C1O)CO)CO,1054.0
+Pyridoxine (hydrochloride),,unclear,unclear,yes,yes,"Vitamin B6, approved for various medical conditions.",CC1=NC=C(C(=C1O)CO)CO.Cl,6019.0
+Ornidazole,,unclear,unclear,yes,yes,"Used for bacterial and protozoal infections, common in some countries.",CC1=NC=C(N1CC(CCl)O)[N+](=O)[O-],28061.0
+Raltitrexed,TYMS,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for cancer treatment as thymidylate synthase inhibitor.,CC1=NC2=C(C=C(C=C2)CN(C)C3=CC=C(S3)C(=O)NC(CCC(=O)O)C(=O)O)C(=O)N1,135400182.0
+BI-3406,"KRAS, SOS1",inhibitor/antagonist,RAS inhibitor,no,yes,"Investigational compound, clinical trials for KRAS-driven cancers.",CC1=NC2=CC(=C(C=C2C(=N1)NC(C)C3=CC(=CC(=C3)N)C(F)(F)F)OC4CCOC4)OC,138911318.0
+Triamcinolone,NR3C1,unclear,Glucocorticoid receptor agonist,yes,yes,Approved corticosteroid for various inflammatory and allergic conditions.,CC12CC(C3(C(C1CC(C2(C(=O)CO)O)O)CCC4=CC(=O)C=CC43C)F)O,31307.0
+Drospirenone,,unclear,unclear,yes,yes,"Found in birth control, often combined with ethinyl estradiol.",CC12CCC(=O)C=C1C3CC3C4C2CCC5(C4C6CC6C57CCC(=O)O7)C,68873.0
+Eplerenone,NR3C2,inhibitor/antagonist,unclear,yes,yes,Used to treat heart failure and hypertension.,CC12CCC(=O)C=C1CC(C3C24C(O4)CC5(C3CCC56CCC(=O)O6)C)C(=O)OC,443872.0
+Quinestrol,,unclear,unclear,yes,yes,Estrogen approved for use in menopausal therapy and contraceptives.,CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)OC5CCCC5,9046.0
+Estrone sulfate (potassium),,unclear,unclear,no,yes,Estrone sulfate used in hormone therapy; potassium salt not specifically approved.,CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)OS(=O)(=O)[O-].[K+],23674502.0
+Finasteride,SRD5A2,inhibitor/antagonist,unclear,yes,yes,Used for benign prostatic hyperplasia and male pattern baldness.,CC12CCC3C(C1CCC2C(=O)NC(C)(C)C)CCC4C3(C=CC(=O)N4)C,57363.0
+Fulvestrant,ESR1,inhibitor/antagonist,unclear,yes,yes,Estrogen receptor antagonist used for hormone receptor-positive breast cancer.,CC12CCC3C(C1CCC2O)C(CC4=C3C=CC(=C4)O)CCCCCCCCCS(=O)CCCC(C(F)(F)F)(F)F,104741.0
+Monocrotaline,"SLC22A1, SLC22A2",inhibitor/antagonist,unclear,no,no,"Toxic pyrrolizidine alkaloid, not approved for human use.",CC1C(=O)OC2CCN3C2C(=CC3)COC(=O)C(C1(C)O)(C)O,9415.0
+Ouabain (Octahydrate),,unclear,unclear,no,yes,Investigated for heart failure but not approved for human use.,CC1C(C(C(C(O1)OC2CC(C3(C4C(CCC3(C2)O)C5(CCC(C5(CC4O)C)C6=CC(=O)OC6)O)CO)O)O)O)O.O.O.O.O.O.O.O.O,6364534.0
+Rutin (trihydrate),,unclear,unclear,no,no,Commonly used in supplements; lacks regulatory approval as a drug.,CC1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O.O.O.O,16218542.0
+Hesperidin,,unclear,unclear,no,yes,"Studied for various health benefits, but not approved as a drug.",CC1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3=CC(=C4C(=O)CC(OC4=C3)C5=CC(=C(C=C5)OC)O)O)O)O)O)O)O)O,10621.0
+Digitoxin,,unclear,unclear,no,yes,"Clinical trials for certain conditions, but not FDA approved for human use.",CC1C(C(CC(O1)OC2C(OC(CC2O)OC3C(OC(CC3O)OC4CCC5(C(C4)CCC6C5CCC7(C6(CCC7C8=CC(=O)OC8)O)C)C)C)C)O)O,441207.0
+Doxorubicin (hydrochloride),"TOP2A, TOP2B, TOP1",inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Commonly used chemotherapy drug for several cancers.,CC1C(C(CC(O1)OC2CC(CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N)O.Cl,443939.0
+Epirubicin (hydrochloride),TOP2A,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used in chemotherapies as single agent or in combination treatments.,CC1C(C(CC(O1)OC2CC(CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N)O.Cl,65348.0
+Idarubicin (hydrochloride),TOP2A,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used in acute myeloid leukemia treatment.,CC1C(C(CC(O1)OC2CC(CC3=C2C(=C4C(=C3O)C(=O)C5=CC=CC=C5C4=O)O)(C(=O)C)O)N)O.Cl,636362.0
+Plicamycin,"SP1, GSTM2",inhibitor/antagonist,unclear,yes,yes,Plicamycin is used to treat testicular cancer and hypercalcemia.,CC1C(C(CC(O1)OC2CC(OC(C2O)C)OC3=CC4=CC5=C(C(=O)C(C(C5)C(C(=O)C(C(C)O)O)OC)OC6CC(C(C(O6)C)O)OC7CC(C(C(O7)C)O)OC8CC(C(C(O8)C)O)(C)O)C(=C4C(=C3C)O)O)O)O,163659.0
+Rifaximin,,unclear,unclear,yes,yes,Approved for treatment of IBS and hepatic encephalopathy.,CC1C=CC=C(C(=O)NC2=C(C3=C(C4=C(C(=C3O)C)OC(C4=O)(OC=CC(C(C(C(C(C(C1O)C)O)C)OC(=O)C)C)OC)C)C5=C2N6C=CC(=CC6=N5)C)O)C,6436173.0
+Doxycycline (monohydrate),"MMP7, MMP8, MMP9, MMP13, MMP14",inhibitor/antagonist,unclear,yes,yes,Approved antibiotic for bacterial infections.,CC1C2C(C3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O.O,54684461.0
+Fusidic acid,,inhibitor/antagonist,unclear,yes,yes,Used topically and orally for bacterial infections.,CC1C2CCC3(C(C2(CCC1O)C)C(CC4C3(CC(C4=C(CCC=C(C)C)C(=O)O)OC(=O)C)C)O)C,3000226.0
+Ipatasertib,"AKT1, AKT2, AKT3",inhibitor/antagonist,PI3K/AKT inhibitor,no,yes,"Investigational cancer drug, not approved for human use.",CC1CC(C2=C1C(=NC=N2)N3CCN(CC3)C(=O)C(CNC(C)C)C4=CC=C(C=C4)Cl)O,24788740.0
+Medroxyprogesterone acetate,PGR,unclear,unclear,yes,yes,Approved as a contraceptive and for hormone therapy.,CC1CC2C(CCC3(C2CCC3(C(=O)C)OC(=O)C)C)C4(C1=CC(=O)CC4)C,6279.0
+Methylprednisolone succinate,NR3C1,unclear,Glucocorticoid receptor agonist,yes,yes,Corticosteroid; approved for reducing inflammation in various conditions.,CC1CC2C3CCC(C3(CC(C2C4(C1=CC(=O)C=C4)C)O)C)(C(=O)COC(=O)CCC(=O)O)O,16923.0
+Dexamethasone,NR3C1,activator/agonist,Glucocorticoid receptor agonist,yes,yes,Commonly used glucocorticoid for inflammation and immune response regulation.,CC1CC2C3CCC4=CC(=O)C=CC4(C3(C(CC2(C1(C(=O)CO)O)C)O)F)C,5743.0
+Dihydroartemisinin,,unclear,unclear,yes,yes,"Active metabolite of artemisinin, approved for malaria treatment.",CC1CCC2C(C(OC3C24C1CCC(O3)(OO4)C)O)C,3000518.0
+Artesunate,,inhibitor/antagonist,JAK/STAT inhibitor,yes,yes,"Used for severe malaria, often partnered with other antimalarial drugs.",CC1CCC2C(C(OC3C24C1CCC(O3)(OO4)C)OC(=O)CCC(=O)O)C,6917864.0
+Artemether,,unclear,unclear,yes,yes,Artemether is used in combination with lumefantrine to treat malaria.,CC1CCC2C(C(OC3C24C1CCC(O3)(OO4)C)OC)C,68911.0
+Rapamycin,"MTOR, FKBP1A",inhibitor/antagonist,MTOR inhibitor,yes,yes,Approved mainly for organ transplantation and cancer treatment.,CC1CCC2CC(C(=CC=CC=CC(CC(C(=O)C(C(C(=CC(C(=O)CC(OC(=O)C3CCCCN3C(=O)C(=O)C1(O2)O)C(C)CC4CCC(C(C4)OC)O)C)C)O)OC)C)C)C)OC,5284616.0
+Temsirolimus,MTOR,inhibitor/antagonist,MTOR inhibitor,yes,yes,Approved for treating renal cell carcinoma.,CC1CCC2CC(C(=CC=CC=CC(CC(C(=O)C(C(C(=CC(C(=O)CC(OC(=O)C3CCCCN3C(=O)C(=O)C1(O2)O)C(C)CC4CCC(C(C4)OC)OC(=O)C(C)(CO)CO)C)C)O)OC)C)C)C)OC,6918289.0
+Everolimus,"MTOR, FKBP1A",inhibitor/antagonist,MTOR inhibitor,yes,yes,"Approved for certain types of cancer, organ transplantation, and tuberous sclerosis.",CC1CCC2CC(C(=CC=CC=CC(CC(C(=O)C(C(C(=CC(C(=O)CC(OC(=O)C3CCCCN3C(=O)C(=O)C1(O2)O)C(C)CC4CCC(C(C4)OC)OCCO)C)C)O)OC)C)C)C)OC,6442177.0
+Tofacitinib,"JAK1, JAK2, JAK3",inhibitor/antagonist,JAK/STAT inhibitor,yes,yes,Approved for rheumatoid arthritis and other conditions.,CC1CCN(CC1N(C)C2=NC=NC3=C2C=CN3)C(=O)CC#N,9926791.0
+Tofacitinib (citrate),"JAK1, JAK2, JAK3",inhibitor/antagonist,JAK/STAT inhibitor,yes,yes,Approved for rheumatoid arthritis and other conditions.,CC1CCN(CC1N(C)C2=NC=NC3=C2C=CN3)C(=O)CC#N.C(C(=O)O)C(CC(=O)O)(C(=O)O)O,10174505.0
+Sonidegib,SMO,inhibitor/antagonist,Sonic inhibitor,yes,yes,Approved for basal cell carcinoma treatment.,CC1CN(CC(O1)C)C2=NC=C(C=C2)NC(=O)C3=CC=CC(=C3C)C4=CC=C(C=C4)OC(F)(F)F,24775005.0
+AZD-8055,MTOR,inhibitor/antagonist,MTOR inhibitor,no,yes,Investigational drug; explored in trials mainly for cancer treatment.,CC1COCCN1C2=NC(=NC3=C2C=CC(=N3)C4=CC(=C(C=C4)OC)CO)N5CCOCC5C,25262965.0
+Elimusertib hydrochloride,ATR,inhibitor/antagonist,unclear,no,yes,Tested in trials for cancer but not approved for human use.,CC1COCCN1C2=NC3=C(C=CN=C3C4=CC=NN4)C(=C2)C5=CC=NN5C,118869362.0
+Clobetasol propionate,"CYP3A5,CYP3A4",inhibitor/antagonist,unclear,yes,yes,It's a potent corticosteroid for skin conditions.,CCC(=O)OC1(C(CC2C1(CC(C3(C2CCC4=CC(=O)C=CC43C)F)O)C)C)C(=O)CCl,32798.0
+Betamethasone dipropionate,NR3C1,activator/agonist,Glucocorticoid receptor agonist,yes,yes,A corticosteroid approved and used in topical formulations for inflammation.,CCC(=O)OCC(=O)C1(C(CC2C1(CC(C3(C2CCC4=CC(=O)C=CC43C)F)O)C)C)OC(=O)CC,21800.0
+Posaconazole,,unclear,unclear,yes,yes,Broad-spectrum antifungal approved for human use.,CCC(C(C)O)N1C(=O)N(C=N1)C2=CC=C(C=C2)N3CCN(CC3)C4=CC=C(C=C4)OCC5CC(OC5)(CN6C=NC=N6)C7=C(C=C(C=C7)F)F,468595.0
+Pravastatin (sodium),HMGCR,inhibitor/antagonist,unclear,yes,yes,Approved as a cholesterol-lowering agent.,CCC(C)C(=O)OC1CC(C=C2C1C(C(C=C2)C)CCC(CC(CC(=O)[O-])O)O)O.[Na+],16759173.0
+Ivermectin,,unclear,unclear,yes,yes,Approved for infections in humans and animals.,CCC(C)C1C(CCC2(O1)CC3CC(O2)CC=C(C(C(C=CC=C4COC5C4(C(C=C(C5O)C)C(=O)O3)O)C)OC6CC(C(C(O6)C)OC7CC(C(C(O7)C)O)OC)OC)C)C,6321424.0
+Topotecan (hydrochloride),TOP1,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,"Approved for treating ovarian, small cell lung, and cervical cancer.",CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(C=CC(=C5CN(C)C)O)N=C4C3=C2)O.Cl,60699.0
+Vinblastine (sulfate),,inhibitor/antagonist,Microtubule inhibitor,yes,yes,"Used in cancer treatment, notably Hodgkin's lymphoma.",CCC1(CC2CC(C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)C78CCN9C7C(C=CC9)(C(C(C8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O.OS(=O)(=O)O,5388983.0
+vincristine,,inhibitor/antagonist,Microtubule inhibitor,yes,yes,Used in chemotherapy for various cancers.,CCC1(CC2CC(C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)C78CCN9C7C(C=CC9)(C(C(C8N6C=O)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O.OS(=O)(=O)O,249332.0
+Indacaterol (maleate),ADRB2,activator/agonist,Adrenoceptor agonist,yes,yes,Approved for COPD as a long-acting bronchodilator.,CCC1=C(C=C2CC(CC2=C1)NCC(C3=C4C=CC(=O)NC4=C(C=C3)O)O)CC.C(=CC(=O)O)C(=O)O,9827599.0
+Pimitespib,"HSP90AA1, HSP90AB1",inhibitor/antagonist,unclear,no,yes,Investigated in trials for cancer; not approved for human use yet.,CCC1=C(C=CC(=C1)C(=O)N)N2C3=NC=CC(=C3C(=N2)C(C)C)N4C=C(N=C4)C5=CN(N=C5)C,67501411.0
+Irinotecan,TOP1,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,"Used in cancer treatment, especially for colorectal cancer.",CCC1=C2CN3C(=CC4=C(C3=O)COC(=O)C4(CC)O)C2=NC5=C1C=C(C=C5)OC(=O)N6CCC(CC6)N7CCCCC7,60838.0
+Irinotecan (hydrochloride),TOP1,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved for cancer treatment as a topoisomerase inhibitor.,CCC1=C2CN3C(=CC4=C(C3=O)COC(=O)C4(CC)O)C2=NC5=C1C=C(C=C5)OC(=O)N6CCC(CC6)N7CCCCC7.Cl,74990.0
+Dinaciclib,"CDK1, CDK2, CDK5, CDK9",inhibitor/antagonist,CDK inhibitor,no,yes,Investigated in trials; not yet approved for human use.,CCC1=C2N=C(C=C(N2N=C1)NCC3=C[N+](=CC=C3)[O-])N4CCCCC4CCO,46926350.0
+Pioglitazone,PPARG,activator/agonist,unclear,yes,yes,Approved for type 2 diabetes treatment.,CCC1=CN=C(C=C1)CCOC2=CC=C(C=C2)CC3C(=O)NC(=O)S3,4829.0
+Volasertib,"PLK1, PLK2, PLK3",inhibitor/antagonist,unclear,no,yes,"Investigated for cancer treatment, not approved for human use.",CCC1C(=O)N(C2=CN=C(N=C2N1C(C)C)NC3=C(C=C(C=C3)C(=O)NC4CCC(CC4)N5CCN(CC5)CC6CC6)OC)C,10461508.0
+Cyclosporin A,"PPP3CA, PPP3CB, PPP3CC",inhibitor/antagonist,unclear,yes,yes,Immunosuppressant approved for organ transplant patients.,CCC1C(=O)N(CC(=O)N(C(C(=O)NC(C(=O)N(C(C(=O)NC(C(=O)NC(C(=O)N(C(C(=O)N(C(C(=O)N(C(C(=O)N(C(C(=O)N1)C(C(C)CC=CC)O)C)C(C)C)C)CC(C)C)C)CC(C)C)C)C)C)CC(C)C)C)C(C)C)CC(C)C)C)C,5284373.0
+Erythromycin,,inhibitor/antagonist,unclear,yes,yes,Antibiotic used to treat infections; approved for human use.,CCC1C(C(C(C(=O)C(CC(C(C(C(C(C(=O)O1)C)OC2CC(C(C(O2)C)O)(C)OC)C)OC3C(C(CC(O3)C)N(C)C)O)(C)O)C)C)O)(C)O,12560.0
+Azithromycin (hydrate),,unclear,unclear,yes,yes,Approved as an antibiotic for bacterial infections.,CCC1C(C(C(N(CC(CC(C(C(C(C(C(=O)O1)C)OC2CC(C(C(O2)C)O)(C)OC)C)OC3C(C(CC(O3)C)N(C)C)O)(C)O)C)C)C)O)(C)O.O.O,3033819.0
+Perindopril (erbumine),"STAT3, ACE",inhibitor/antagonist,unclear,yes,yes,Approved ACE inhibitor for hypertension and heart failure.,CCCC(C(=O)OCC)NC(C)C(=O)N1C2CCCCC2CC1C(=O)O.CC(C)(C)N,441313.0
+Sildenafil,PDE5A,inhibitor/antagonist,unclear,yes,yes,Approved for erectile dysfunction and pulmonary arterial hypertension.,CCCC1=NN(C2=C1N=C(NC2=O)C3=C(C=CC(=C3)S(=O)(=O)N4CCN(CC4)C)OCC)C,135398744.0
+Budesonide,NR3C1,activator/agonist,Glucocorticoid receptor agonist,yes,yes,"Used for asthma, Crohn's disease, ulcerative colitis.",CCCC1OC2CC3C4CCC5=CC(=O)C=CC5(C4C(CC3(C2(O1)C(=O)CO)C)O)C,5281004.0
+Hexylresorcinol,,inhibitor/antagonist,unclear,yes,yes,Used in throat lozenges and skin creams for antiseptic purposes.,CCCCCCC1=C(C=C(C=C1)O)O,3610.0
+Oleic acid,,activator/agonist,unclear,yes,yes,"Used in food, cosmetics, and as an excipient in pharmaceuticals.",CCCCCCCCC=CCCCCCCCC(=O)O,445639.0
+Fingolimod (hydrochloride),PAK1,unclear,unclear,yes,yes,Approved for multiple sclerosis treatment.,CCCCCCCCC1=CC=C(C=C1)CCC(CO)(CO)N.Cl,107969.0
+Daptomycin,,unclear,unclear,yes,yes,Approved as an antibiotic for skin infections.,CCCCCCCCCC(=O)NC(CC1=CNC2=CC=CC=C21)C(=O)NC(CC(=O)N)C(=O)NC(CC(=O)O)C(=O)NC3C(OC(=O)C(NC(=O)C(NC(=O)C(NC(=O)CNC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)CNC3=O)CCCN)CC(=O)O)C)CC(=O)O)CO)C(C)CC(=O)O)CC(=O)C4=CC=CC=C4N)C,21585658.0
+Orlistat,,inhibitor/antagonist,unclear,yes,yes,Used to treat obesity by preventing fat absorption.,CCCCCCCCCCCC(CC1C(C(=O)O1)CCCCCC)OC(=O)C(CC(C)C)NC=O,3034010.0
+Levobupivacaine (hydrochloride),SCN5A,inhibitor/antagonist,unclear,yes,yes,Approved as an enantiomer of bupivacaine for anesthetic use.,CCCCN1CCCCC1C(=O)NC2=C(C=CC=C2C)C.Cl,117965.0
+Proglumide,"CCKBR, CCKAR",inhibitor/antagonist,unclear,no,yes,"Proglumide investigated for gastrointestinal use, not widely approved for humans.",CCCN(CCC)C(=O)C(CCC(=O)O)NC(=O)C1=CC=CC=C1,4922.0
+Ropivacaine (hydrochloride monohydrate),,inhibitor/antagonist,unclear,yes,yes,A local anesthetic used in surgeries and pain management.,CCCN1CCCCC1C(=O)NC2=C(C=CC=C2C)C.O.Cl,6918111.0
+Macitentan,"EDNRA, EDNRB",inhibitor/antagonist,unclear,yes,yes,Approved for pulmonary arterial hypertension treatment.,CCCNS(=O)(=O)NC1=C(C(=NC=N1)OCCOC2=NC=C(C=N2)Br)C3=CC=C(C=C3)Br,16004692.0
+Vemurafenib,BRAF,inhibitor/antagonist,RAF inhibitor,yes,yes,Approved for treating BRAF V600E mutation-positive melanoma.,CCCS(=O)(=O)NC1=C(C(=C(C=C1)F)C(=O)C2=CNC3=C2C=C(C=N3)C4=CC=C(C=C4)Cl)F,42611257.0
+Lidocaine (hydrochloride),"MAP2K1, MAPK1, NFKB1",unclear,unclear,yes,yes,Lidocaine hydrochloride is approved as a local anesthetic.,CCN(CC)CC(=O)NC1=C(C=CC=C1C)C.Cl,6314.0
+Sunitinib,"KDR, PDGFRB",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved anticancer drug used for renal cell carcinoma and gastrointestinal stromal tumors.,CCN(CC)CCNC(=O)C1=C(NC(=C1C)C=C2C3=C(C=CC(=C3)F)NC2=O)C,5329102.0
+Procainamide (hydrochloride),DNMT1,inhibitor/antagonist,DNA methyltransferase inhibitor,yes,yes,Used for arrhythmias; often as its hydrochloride salt form.,CCN(CC)CCNC(=O)C1=CC=C(C=C1)N.Cl,66068.0
+Lucanthone,,inhibitor/antagonist,unclear,no,yes,"Investigated for cancer treatment, not approved for human use.",CCN(CC)CCNC1=C2C(=C(C=C1)C)SC3=CC=CC=C3C2=O,10180.0
+RMC-6236,KRAS,inhibitor/antagonist,RAS inhibitor,no,yes,"Investigated as a potential cancer treatment, but not approved for human use.",CCN1C2=C3C=C(C=C2)C4=CSC(=N4)CC(C(=O)N5CCCC(N5)C(=O)OCC(CC3=C1C6=C(N=CC(=C6)N7CCN(CC7)C)C(C)OC)(C)C)NC(=O)C8CC8C,164726578.0
+Pemigatinib,"FGFR1, FGFR2, FGFR3, FGFR4",inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for treating cholangiocarcinoma.,CCN1C2=C3C=C(NC3=NC=C2CN(C1=O)C4=C(C(=CC(=C4F)OC)OC)F)CN5CCOCC5,86705695.0
+Infigratinib,"FGFR1, FGFR2, FGFR3, FGFR4",inhibitor/antagonist,Other TK inhibitor,yes,yes,Used for bile duct cancer treatment.,CCN1CCN(CC1)C2=CC=C(C=C2)NC3=CC(=NC=N3)N(C)C(=O)NC4=C(C(=CC(=C4Cl)OC)OC)Cl,53235510.0
+NG25,"MAP4K2, MAP3K7, LYN, ABL1, ABL2, FER, SRC, EPHA2, EPHB2, EPHB4, ZAK, ZKSCAN1, RAF1",inhibitor/antagonist,Other MAPK inhibitor,no,yes,"NG25 is in preclinical stages, not approved for humans.",CCN1CCN(CC1)CC2=C(C=C(C=C2)NC(=O)C3=CC(=C(C=C3)C)OC4=C5C=CNC5=NC=C4)C(F)(F)F,53340664.0
+Abemaciclib,"CDK4, CDK6",inhibitor/antagonist,CDK inhibitor,yes,yes,"FDA approved for HR-positive, HER2-negative breast cancer.",CCN1CCN(CC1)CC2=CN=C(C=C2)NC3=NC=C(C(=N3)C4=CC5=C(C(=C4)F)N=C(N5C(C)C)C)F,46220502.0
+Bimatoprost,,unclear,unclear,yes,yes,Approved for treating glaucoma and cosmetic lash applications.,CCNC(=O)CCCC=CCC1C(CC(C1C=CC(CCC2=CC=CC=C2)O)O)O,5311027.0
+Dorzolamide (hydrochloride),CA2,inhibitor/antagonist,unclear,yes,yes,Approved for glaucoma treatment.,CCNC1CC(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)C.Cl,6918132.0
+Tazarotene,"RARA, RARB, RARG",activator/agonist,Retinoic receptor agonist,yes,yes,Topical retinoid approved for psoriasis and acne treatment.,CCOC(=O)C1=CN=C(C=C1)C#CC2=CC3=C(C=C2)SCCC3(C)C,5381.0
+Neratinib,"EGFR, ERBB2",inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for breast cancer treatment.,CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=CC(=C(C=C3)OCC4=CC=CC=N4)Cl)C#N)NC(=O)C=CCN(C)C,9915743.0
+Neratinib (maleate),"EGFR, ERBB2",inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for HER2-positive breast cancer treatment.,CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=CC(=C(C=C3)OCC4=CC=CC=N4)Cl)C#N)NC(=O)C=CCN(C)C.C(=CC(=O)O)C(=O)O,67307512.0
+Dapagliflozin,SLC5A2,inhibitor/antagonist,Glucose transporter inhibitor,yes,yes,Approved for diabetes treatment.,CCOC1=CC=C(C=C1)CC2=C(C=CC(=C2)C3C(C(C(C(O3)CO)O)O)O)Cl,9887712.0
+"Dapagliflozin ((2S)-1,2-propanediol, hydrate)",SLC5A2,inhibitor/antagonist,Glucose transporter inhibitor,yes,yes,Approved SGLT2 inhibitor for type 2 diabetes and heart failure.,CCOC1=CC=C(C=C1)CC2=C(C=CC(=C2)C3C(C(C(C(O3)CO)O)O)O)Cl.CC(CO)O.O,24906252.0
+Auranofin,"TXNRD1, TXNRD2",inhibitor/antagonist,unclear,yes,yes,Approved for rheumatoid arthritis treatment since 1985.,CCP(CC)CC.CC(=O)OCC1C(C(C(C(O1)[S-])OC(=O)C)OC(=O)C)OC(=O)C.[Au+],24199313.0
+TAK-901,AURKB,inhibitor/antagonist,unclear,no,yes,Investigational cancer drug; not approved for human use yet.,CCS(=O)(=O)C1=CC=CC(=C1)C2=CC(=C(C3=C2C4=C(N3)N=CC(=C4)C)C)C(=O)NC5CCN(CC5)C,16124208.0
+Loperamide (hydrochloride),,unclear,unclear,yes,yes,"Approved for diarrhea treatment, limited CNS penetration due to P-gp substrate.",CN(C)C(=O)C(CCN1CCC(CC1)(C2=CC=C(C=C2)Cl)O)(C3=CC=CC=C3)C4=CC=CC=C4.Cl,71420.0
+Ribociclib,"CDK4, CDK6",inhibitor/antagonist,CDK inhibitor,yes,yes,Approved for human use in combination with letrozole for breast cancer.,CN(C)C(=O)C1=CC2=CN=C(N=C2N1C3CCCC3)NC4=NC=C(C=C4)N5CCNCC5,44631912.0
+Altretamine,,unclear,DNA synthesis/repair inhibitor,yes,yes,Used as a chemotherapy drug for ovarian cancer.,CN(C)C1=NC(=NC(=N1)N(C)C)N(C)C,2123.0
+Demeclocycline,,inhibitor/antagonist,unclear,yes,yes,"Used off-label for SIADH, primarily an antibiotic.",CN(C)C1C2CC3C(C4=C(C=CC(=C4C(=C3C(=O)C2(C(=C(C1=O)C(=O)N)O)O)O)O)Cl)O,54680690.0
+Afatinib,"EGFR, ERBB2",inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,"Approved for treatment of certain cancers, such as non-small cell lung cancer.",CN(C)CC=CC(=O)NC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC(=C(C=C3)F)Cl)OC4CCOC4,10184653.0
+Relugolix,GNRHR,inhibitor/antagonist,unclear,yes,yes,Approved for prostate cancer and uterine fibroids treatment.,CN(C)CC1=C(SC2=C1C(=O)N(C(=O)N2CC3=C(C=CC=C3F)F)C4=NN=C(C=C4)OC)C5=CC=C(C=C5)NC(=O)NOC,10348973.0
+Citalopram (hydrobromide),SLC6A4,inhibitor/antagonist,unclear,yes,yes,Approved antidepressant; selective serotonin reuptake inhibitor (SSRI).,CN(C)CCCC1(C2=C(CO1)C=C(C=C2)C#N)C3=CC=C(C=C3)F.Br,77995.0
+Almonertinib (hydrochloride),EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved in China for non-small cell lung cancer.,CN(C)CCN(C)C1=CC(=C(C=C1NC(=O)C=C)NC2=NC=CC(=N2)C3=CN(C4=CC=CC=C43)C5CC5)OC.Cl,137319707.0
+Almonertinib (mesylate),EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved in China for NSCLC treatment.,CN(C)CCN(C)C1=CC(=C(C=C1NC(=O)C=C)NC2=NC=CC(=N2)C3=CN(C4=CC=CC=C43)C5CC5)OC.CS(=O)(=O)O,162368359.0
+Diphenhydramine,HRH1,inhibitor/antagonist,unclear,yes,yes,"Approved antihistamine, used for allergies and as a sleep aid.",CN(C)CCOC(C1=CC=CC=C1)C2=CC=CC=C2,3100.0
+ML264,KLF5,inhibitor/antagonist,unclear,no,no,No clinical trials found on clinicaltrials.gov.,CN(C1CCS(=O)(=O)CC1)C(=O)CNC(=O)C=CC2=CC(=CC=C2)Cl,51003603.0
+Methotrexate,DHFR,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Widely used for cancer and autoimmune diseases treatments.,CN(CC1=CN=C2C(=N1)C(=NC(=N2)N)N)C3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O,126941.0
+Ivabradine (hydrochloride),HCN4,inhibitor/antagonist,unclear,yes,yes,"Approved for human use, primarily for heart failure and angina management.",CN(CCCN1CCC2=CC(=C(C=C2CC1=O)OC)OC)CC3CC4=CC(=C(C=C34)OC)OC.Cl,3045381.0
+Rosiglitazone,"PPARG, TRPC5, TRPM3",unclear,unclear,yes,yes,Approved for diabetes; risk of heart failure in some patients.,CN(CCOC1=CC=C(C=C1)CC2C(=O)NC(=O)S2)C3=CC=CC=N3,77999.0
+Piroxicam,"PTGS1, PTGS2",inhibitor/antagonist,Cyclooxygenase inhibitor,yes,yes,Approved NSAID for arthritis and pain relief.,CN1C(=C(C2=CC=CC=C2S1(=O)=O)O)C(=O)NC3=CC=CC=N3,54676228.0
+c-Kit-IN-1,"KIT, MET, KDR, PDGFRA, PDGFRB",inhibitor/antagonist,Multi-TK inhibitor,no,no,Experimental compound with no clinical trials reported.,CN1C=C(C=N1)C2=NC=CC(=C2)OC3=C(C=C(C(=C3)F)NC(=O)C4(CC4)C(=O)NC5=CC=CC=C5)F,46208890.0
+CP21R7,"GSK3B, PRKCA",inhibitor/antagonist,GSK3 inhibitor,no,yes,Investigational drug in research for neurodegenerative diseases.,CN1C=C(C2=CC=CC=C21)C3=C(C(=O)NC3=O)C4=CC(=CC=C4)N,5327711.0
+9-ING-41,GSK3B,inhibitor/antagonist,GSK3 inhibitor,no,yes,"Investigational drug, not approved for human use yet.",CN1C=C(C2=CC3=C(C=C21)OCO3)C4=C(C(=O)NC4=O)C5=COC6=C5C=C(C=C6)F,44582816.0
+Binimetinib,"MAP2K1, MAP2K2",inhibitor/antagonist,MEK inhibitor,no,yes,"Investigated for cancer, not approved for human use.",CN1C=NC2=C1C=C(C(=C2F)NC3=C(C=C(C=C3)Br)F)C(=O)NOCCO,10288191.0
+TAK-733,MAP2K1,inhibitor/antagonist,MEK inhibitor,no,yes,Investigated as anti-cancer MEK inhibitor; not approved for human use.,CN1C2=C(C(=C(C1=O)F)NC3=C(C=C(C=C3)I)F)C(=O)N(C=N2)CC(CO)O,24963252.0
+Bendamustine,,unclear,DNA synthesis/repair inhibitor,yes,yes,Approved for use in leukemia and lymphoma treatment.,CN1C2=C(C=C(C=C2)N(CCCl)CCCl)N=C1CCCC(=O)O,65628.0
+Benztropine (mesylate),,inhibitor/antagonist,unclear,yes,yes,Used for Parkinson's disease and drug-induced extrapyramidal symptoms.,CN1C2CCC1CC(C2)OC(C3=CC=CC=C3)C4=CC=CC=C4.CS(=O)(=O)O,238053.0
+Tadalafil,PDE5A,inhibitor/antagonist,unclear,yes,yes,Used for erectile dysfunction and pulmonary arterial hypertension.,CN1CC(=O)N2C(C1=O)CC3=C(C2C4=CC5=C(C=C4)OCO5)NC6=CC=CC=C36,110635.0
+Vandetanib,"EGFR, KDR",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for use in medullary thyroid cancer.,CN1CCC(CC1)COC2=C(C=C3C(=C2)N=CN=C3NC4=C(C=C(C=C4)Br)F)OC,3081361.0
+Glasdegib,SMO,inhibitor/antagonist,Sonic inhibitor,yes,yes,Glasdegib is approved for acute myeloid leukemia.,CN1CCC(CC1C2=NC3=CC=CC=C3N2)NC(=O)NC4=CC=C(C=C4)C#N,25166913.0
+Isocorydine,,unclear,unclear,no,no,No clinical trials found on clinicaltrials.gov,CN1CCC2=CC(=C(C3=C2C1CC4=C3C(=C(C=C4)OC)O)OC)OC,10143.0
+Berbamine,CACNA1C,inhibitor/antagonist,unclear,no,no,"Studied for cancer treatment, but not approved for human use yet.",CN1CCC2=CC(=C3C=C2C1CC4=CC=C(C=C4)OC5=C(C=CC(=C5)CC6C7=C(O3)C(=C(C=C7CCN6C)OC)OC)O)OC,275182.0
+Berbamine (dihydrochloride),,inhibitor/antagonist,unclear,no,no,No clinical trial data found on clinicaltrials.gov.,CN1CCC2=CC(=C3C=C2C1CC4=CC=C(C=C4)OC5=C(C=CC(=C5)CC6C7=C(O3)C(=C(C=C7CCN6C)OC)OC)O)OC.Cl.Cl,16217067.0
+Cepharanthine,"CYP3A4, CYP2E1, CYP2C9",inhibitor/antagonist,unclear,no,yes,Studied for cancer and viral diseases; not approved for human use yet.,CN1CCC2=CC3=C(C4=C2C1CC5=CC=C(C=C5)OC6=C(C=CC(=C6)CC7C8=CC(=C(C=C8CCN7C)OC)O4)OC)OCO3,10206.0
+Sinomenine,OPRM1,unclear,unclear,no,yes,Used in trials for pain and arthritis.,CN1CCC23CC(=O)C(=CC2C1CC4=C3C(=C(C=C4)OC)O)OC,5459308.0
+Adagrasib,KRAS,inhibitor/antagonist,RAS inhibitor,yes,yes,Approved for treating KRAS G12C-mutated non-small cell lung cancer.,CN1CCCC1COC2=NC3=C(CCN(C3)C4=CC=CC5=C4C(=CC=C5)Cl)C(=N2)N6CCN(C(C6)CC#N)C(=O)C(=C)F,138611145.0
+LB-100,"PPP2CA, PPP2CB",inhibitor/antagonist,unclear,no,yes,LB-100 is in clinical trials for cancer treatment.,CN1CCN(CC1)C(=O)C2C3CCC(C2C(=O)O)O3,3578572.0
+Entrectinib,"NTRK1, NTRK2, NTRK3, ROS1, ALK",inhibitor/antagonist,Other TK inhibitor,yes,yes,Approved for use in cancers with NTRK gene fusions.,CN1CCN(CC1)C2=CC(=C(C=C2)C(=O)NC3=NNC4=C3C=C(C=C4)CC5=CC(=CC(=C5)F)F)NC6CCOCC6,25141092.0
+AZD2858,"GSK3B, GSK3A",inhibitor/antagonist,GSK3 inhibitor,no,no,Investigated in rodent models.,CN1CCN(CC1)S(=O)(=O)C2=CC=C(C=C2)C3=CN=C(C(=N3)C(=O)NC4=CN=CC=C4)N,10138980.0
+Capmatinib,MET,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for NSCLC treatment by FDA in May 2020.,CNC(=O)C1=C(C=C(C=C1)C2=NN3C(=CN=C3N=C2)CC4=CC5=C(C=C4)N=CC=C5)F,25145656.0
+Apalutamide,AR,inhibitor/antagonist,Androgen receptor antagonist,yes,yes,Used for non-metastatic castration-resistant prostate cancer.,CNC(=O)C1=C(C=C(C=C1)N2C(=S)N(C(=O)C23CCC3)C4=CC(=C(N=C4)C#N)C(F)(F)F)F,24872560.0
+Regorafenib,"BRAF, FLT1, FLT4, KDR, KIT, PDGFRB, RAF1, RET, TEK",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,"Used for metastatic colorectal cancer, GIST, HCC.",CNC(=O)C1=NC=CC(=C1)OC2=CC(=C(C=C2)NC(=O)NC3=CC(=C(C=C3)Cl)C(F)(F)F)F,11167602.0
+Phenylephrine (hydrochloride),"ADRA1A, ADRA1B, ADRA1D",activator/agonist,Adrenoceptor agonist,yes,yes,Widely used as a decongestant and in eye drops.,CNCC(C1=CC(=CC=C1)O)O.Cl,5284443.0
+Rucaparib (phosphate),"PARP1, PARP2, PARP3",inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Approved as a cancer therapy PARP inhibitor.,CNCC1=CC=C(C=C1)C2=C3CCNC(=O)C4=C3C(=CC(=C4)F)N2.OP(=O)(O)O,9931953.0
+Clopidogrel,P2RY12,inhibitor/antagonist,unclear,yes,yes,"Antiplatelet drug approved for preventing stroke, heart attack in high-risk patients.",COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=C(C2)C=CS3,60606.0
+Dimethyl fumarate,NFE2L2,activator/agonist,unclear,yes,yes,Approved for multiple sclerosis treatment.,COC(=O)C=CC(=O)OC,637568.0
+Methyl aminolevulinate (hydrochloride),,unclear,unclear,yes,yes,Used in photodynamic therapy for actinic keratosis.,COC(=O)CCC(=O)CN.Cl,157921.0
+Mebendazole,"TUBA1A, TUBA1B, TUBA1C, TUBB, TUBB1, TUBB2A, TUBB3, TUBB4A, TUBB4B, TUBB6",inhibitor/antagonist,Microtubule inhibitor,yes,yes,Approved for treating parasitic worm infestations.,COC(=O)NC1=NC2=C(N1)C=C(C=C2)C(=O)C3=CC=CC=C3,4030.0
+Tranilast,"PLA2G2A, EGR1",inhibitor/antagonist,unclear,yes,yes,Approved for asthma and allergic disorders in some countries.,COC1=C(C=C(C=C1)C=CC(=O)NC2=CC=CC=C2C(=O)O)OC,5282230.0
+Gefitinib,EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for non-small cell lung cancer.,COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)OCCCN4CCOCC4,123631.0
+Simotinib,EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,no,yes,"Investigated in trials, but not approved for human use.",COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)OCCN4CC5(CC5)C6(C4)OCCO6,16735117.0
+Bergenin,,unclear,unclear,no,yes,Investigated for anti-inflammatory and antiulcer effects in clinical trials.,COC1=C(C=C2C(=C1O)C3C(C(C(C(O3)CO)O)O)OC2=O)O,66065.0
+Ferulic acid,"FGFR1, FGFR2",inhibitor/antagonist,Other TK inhibitor,no,yes,Used in skincare; not an FDA-approved drug.,COC1=C(C=CC(=C1)C=CC(=O)O)O,445858.0
+Amsacrine,TOP2A,inhibitor/antagonist,DNA synthesis/repair inhibitor,yes,yes,Used in the treatment of acute leukemias.,COC1=C(C=CC(=C1)NS(=O)(=O)C)NC2=C3C=CC=CC3=NC4=CC=CC=C42,2179.0
+Palmatine (chloride),"IDO1, WNV NS2B-NS3",inhibitor/antagonist,unclear,no,yes,Used in some traditional medicine; lacks formal approval for human use.,COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC(=C(C=C4CC3)OC)OC)OC.[Cl-],73442.0
+Berberine (chloride hydrate),,unclear,unclear,no,yes,"Used in trials for metabolic/heart diseases, not FDA-approved.",COC1=C(C2=C[N+]3=C(C=C2C=C1)C4=CC5=C(C=C4CC3)OCO5)OC.O.[Cl-],155074.0
+Futibatinib,"FGFR1, FGFR2, FGFR3, FGFR4",inhibitor/antagonist,Other TK inhibitor,yes,yes,Used for cholangiocarcinoma; FDA approved.,COC1=CC(=CC(=C1)C#CC2=NN(C3=NC=NC(=C23)N)C4CCN(C4)C(=O)C=C)OC,71621331.0
+Tubulin inhibitor 6,,inhibitor/antagonist,Microtubule inhibitor,no,no,No available data on human use or clinical trials.,COC1=CC=C(C=C1)C(=O)N2C3=CC=CC=C3SC4=C2C=C(C=C4)Cl,2359994.0
+Anethole trithione,,unclear,unclear,no,yes,Investigated for dry mouth in clinical trials.,COC1=CC=C(C=C1)C2=CC(=S)SS2,2194.0
+Cabozantinib (S-malate),"MET, KDR, AXL",inhibitor/antagonist,Multi-TK inhibitor,yes,yes,Approved for medullary thyroid cancer and renal cell carcinoma.,COC1=CC2=C(C=CN=C2C=C1OC)OC3=CC=C(C=C3)NC(=O)C4(CC4)C(=O)NC5=CC=C(C=C5)F.C(C(C(=O)O)O)C(=O)O,25102846.0
+Fluvoxamine,SLC6A4,unclear,unclear,yes,yes,SSRI approved for treating OCD and depression.,COCCCCC(=NOCCN)C1=CC=C(C=C1)C(F)(F)F,5324346.0
+Fluvoxamine (maleate),,inhibitor/antagonist,unclear,yes,yes,Approved for treating OCD and depression-related disorders in humans.,COCCCCC(=NOCCN)C1=CC=C(C=C1)C(F)(F)F.C(=CC(=O)O)C(=O)O,9560989.0
+Erlotinib,EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for human use for non-small cell lung cancer.,COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC,176870.0
+Belzutifan,EPAS1,inhibitor/antagonist,unclear,yes,yes,Approved for treating certain cancer types.,CS(=O)(=O)C1=C2C(C(C(C2=C(C=C1)OC3=CC(=CC(=C3)C#N)F)F)F)O,117947097.0
+Vismodegib,"SMO, ABCB1, ABCG2",inhibitor/antagonist,Sonic inhibitor,yes,yes,Approved for treating basal cell carcinoma.,CS(=O)(=O)C1=CC(=C(C=C1)C(=O)NC2=CC(=C(C=C2)Cl)C3=CC=CC=N3)Cl,24776445.0
+Nimesulide,PTGS2,inhibitor/antagonist,Cyclooxygenase inhibitor,no,yes,Withdrawn in some countries due to safety concerns; not FDA-approved.,CS(=O)(=O)NC1=C(C=C(C=C1)[N+](=O)[O-])OC2=CC=CC=C2,4495.0
+Nafamostat (mesylate),,inhibitor/antagonist,unclear,yes,yes,"Approved in some countries, often used as anticoagulant.",CS(=O)(=O)O.CS(=O)(=O)O.C1=CC(=CC=C1C(=O)OC2=CC3=C(C=C2)C=C(C=C3)C(=N)N)N=C(N)N,5311180.0
+Busulfan,,unclear,DNA synthesis/repair inhibitor,yes,yes,Approved for use in bone marrow transplantation.,CS(=O)(=O)OCCCCOS(=O)(=O)C,2478.0
+18β-Glycyrrhetinic acid,,unclear,unclear,no,yes,"Used in cosmetics, derived from licorice root, no approval for human drugs.",C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O)C)(C)C(=O)O,10114.0
+Trametinib (DMSO_TF solvate),"MAP2K1, MAP2K2",inhibitor/antagonist,MEK inhibitor,yes,yes,"Approved for use in cancer treatment (e.g., melanoma).", CC1=C2C(=C(N(C1=O)C)NC3=C(C=C(C=C3)I)F)C(=O)N(C(=O)N2C4=CC=CC(=C4)NC(=O)C)C5CC5  ,11707110.0
+Sacubitril/Valsartan,AGTR1,inhibitor/antagonist,unclear,yes,yes,"Combination drug known as Entresto, used for heart failure treatment.",,
+Pitavastatin (Calcium),HMGCR,inhibitor/antagonist,unclear,yes,yes,"Approved for lowering cholesterol, part of statins class of drugs.", C1C(C1)C2=NC3=CC=CC=C3C(=C2/C=C/[C@@H](O)C[C@@H](O)CC(=O)[O-])C4=CC=C(C=C4)F.C1C(C1)C2=NC3=CC=CC=C3C(=C2/C=C/[C@@H](O)C[C@@H](O)CC(=O)[O-])C4=CC=C(C=C4)F.[Ca+2],5282451.0
+Verteporfin,YAP1,inhibitor/antagonist,unclear,yes,yes,Used in photodynamic therapy for macular degeneration.,,
+Quinidine (15% dihydroquinidine),KCNH2,inhibitor/antagonist,unclear,yes,yes,Approved for arrhythmias as part of quinine alkaloids.,COC1=CC2=C(C=CN=C2C=C1)[C@@H]([C@H]3C[C@@H]4CCN3C[C@@H]4C=C)O  ,441074.0
+Canagliflozin (hemihydrate),SLC5A2,inhibitor/antagonist,Glucose transporter inhibitor,yes,yes,Approved for type 2 diabetes.,CC1=C(C=C(C=C1)[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O)CC3=CC=C(S3)C4=CC=C(C=C4)F.CC1=C(C=C(C=C1)[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O)CC3=CC=C(S3)C4=CC=C(C=C4)F.O,24997615.0
+Osimertinib (mesylate),EGFR,inhibitor/antagonist,EGFR/ERBB inhibitor,yes,yes,Approved for non-small cell lung cancer treatment.,CN1C=C(C2=CC=CC=C21)C3=NC(=NC=C3)NC4=C(C=C(C(=C4)NC(=O)C=C)N(C)CCN(C)C)OC.CS(=O)(=O)O  ,78357807.0
+γ-Oryzanol,,inhibitor/antagonist,DNA methyltransferase inhibitor,no,yes,Used in supplements; limited human data.,C[C@H](CCC=C(C)C)[C@H]1CC[C@@]2([C@@]1(CC[C@]34[C@H]2CC[C@@H]5[C@]3(C4)CC[C@@H](C5(C)C)OC(=O)/C=C/C6=CC(=C(C=C6)O)OC)C)C,5282164.0
