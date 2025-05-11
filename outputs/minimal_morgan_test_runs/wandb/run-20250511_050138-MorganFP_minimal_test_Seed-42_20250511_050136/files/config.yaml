@@ -1,0 +1,446 @@
+_wandb:
+    value:
+        cli_version: 0.19.11
+        m:
+            - "1": test_raw_predictions_epoch_3.ncols
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3.nrows
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_mse_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.nrows
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.sha256
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.ncols
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2._type
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3.artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3._latest_artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.size
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": train_loss
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1._type
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_loss
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_A-172_cell_line_pearson_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0._latest_artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.ncols
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3._type
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3.sha256
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.ncols
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_A-172_cell_line_mse_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_A-172_cell_line_r2_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_A-172_cell_line_mse_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3.size
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_r2_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_A-172_cell_line_pearson_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_A-172_cell_line_r2_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_pearson_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.nrows
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_raw_predictions_epoch_3.path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0._type
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.nrows
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_r2_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1._latest_artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2._latest_artifact_path
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.sha256
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_mse_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": test_pearson_epoch
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_0.sha256
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": val_loss
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": lr-AdamW
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_1.size
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": validation_raw_predictions_epoch_2.size
+              "5": 2
+              "6":
+                - 1
+                - 3
+              "7": []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 11
+                - 12
+                - 41
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+                - 106
+            "2":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 11
+                - 12
+                - 41
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+                - 106
+            "3":
+                - 2
+                - 7
+                - 13
+                - 14
+                - 16
+                - 23
+                - 55
+                - 66
+            "4": 3.10.12
+            "5": 0.19.11
+            "6": 4.51.3
+            "8":
+                - 5
+            "12": 0.19.11
+            "13": linux-x86_64
+data:
+    value:
+        drug_meta_csv_path: data/drug_metadata.csv
+        drug_meta_id_col: drug
+        drug_meta_smiles_col: canonical_smiles
+        enformer_input_seq_length: 49152
+        fasta_file_path: /home/ubuntu/data/hg38.fa
+        filter_drugs_by_ids: null
+        morgan_fp_nbits: 2048
+        morgan_fp_radius: 2
+        pbulk_cell_line_col: cell_line
+        pbulk_dose_col: drug_dose
+        pbulk_drug_col: drug_id
+        pbulk_expr_col: expression
+        pbulk_gene_col: gene_id
+        pbulk_parquet_path: data/pseudoBulk_celllineXdrug_top3k_for_testing.parquet
+        regions_chr_col: seqnames
+        regions_csv_path: data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval.csv
+        regions_end_col: ends
+        regions_gene_col: gene_name
+        regions_set_col: set
+        regions_start_col: starts
+        regions_strand_col: null
+delete_checkpoint_after_run:
+    value: true
+dose_input_dim:
+    value: 1
+enformer_model_name:
+    value: EleutherAI/enformer-official-rough
+enformer_target_length:
+    value: -1
+eval_gene_sets:
+    value: null
+experiment_name:
+    value: MorganFP_minimal_test
+final_output_tracks:
+    value: 1
+fusion_hidden_dim:
+    value: 256
+learning_rate:
+    value: 5e-06
+logging:
+    value:
+        checkpoint_monitor_metric: validation_pearson_epoch
+        checkpoint_monitor_mode: max
+        early_stopping_metric: validation_pearson_epoch
+        early_stopping_mode: max
+        early_stopping_patience: 5
+        save_dir: outputs/minimal_morgan_test_runs
+        save_top_k: 1
+        wandb_entity: null
+        wandb_project: tahoeformer
+loss_alpha:
+    value: 1
+model:
+    value:
+        dose_input_dim: 1
+        enformer_model_name: EleutherAI/enformer-official-rough
+        enformer_target_length: -1
+        eval_gene_sets: null
+        final_output_tracks: 1
+        fusion_hidden_dim: 256
+        learning_rate: 5e-06
+        loss_alpha: 1
+        morgan_fingerprint_dim: 2048
+        num_output_tracks_enformer_head: 1
+        weight_decay: 0.01
+morgan_fingerprint_dim:
+    value: 2048
+num_output_tracks_enformer_head:
+    value: 1
+run_name:
+    value: MorganFP_minimal_test_Seed-42_20250511_050136
+training:
+    value:
+        accelerator: auto
+        accumulate_grad_batches: 1
+        batch_size: 2
+        deterministic: true
+        gpus:
+            - 0
+        gradient_clip_val: 0.05
+        limit_test_batches: 1
+        limit_train_batches: 1
+        limit_val_batches: 1
+        max_epochs: 3
+        num_workers: 0
+        pin_memory: false
+        precision: bf16-mixed
+        seed: 42
+        strategy: auto
+        val_check_interval: 1
+use_wandb:
+    value: true
+validate_before_train:
+    value: true
+weight_decay:
+    value: 0.01

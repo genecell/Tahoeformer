@@ -9,6 +9,7 @@ import pyfaidx
 import kipoiseq.transforms.functional 
 from rdkit import Chem
 from rdkit.Chem.AllChem import GetMorganFingerprintAsBitVect
+from rdkit.Chem import rdFingerprintGenerator
 
 # --- Global Config ---
 # Enformer typically uses a 196,608 bp input sequence.
@@ -403,6 +404,12 @@ class TahoeSMILESDataset(Dataset):
         
         self.target_set          = target_set # Store the specific set value for this instance
 
+        # --- Morgan Fingerprint Generator (NEW) ---
+        self._morgan_gen = rdFingerprintGenerator.GetMorganGenerator(
+            radius=self.morgan_fp_radius,
+            fpSize=self.morgan_fp_nbits
+        )
+
         # load & merge regions + pseudobulk
         print(f"  Loading TSS regions from: {regions_csv_path}")
         try:
@@ -486,19 +493,18 @@ class TahoeSMILESDataset(Dataset):
         print("TahoeSMILESDataset initialized.")
 
     def _generate_morgan_fingerprint(self, smiles_string: str) -> np.ndarray:
-        """Generates a Morgan fingerprint from a SMILES string."""
-        if not smiles_string: # Handle empty SMILES string
+        """Generates a Morgan fingerprint from a SMILES string using the new generator API."""
+        if not smiles_string:
             return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
         try:
             mol = Chem.MolFromSmiles(smiles_string)
             if mol:
-                fp = GetMorganFingerprintAsBitVect(mol, self.morgan_fp_radius, nBits=self.morgan_fp_nbits)
-                return np.array(fp, dtype=np.float32)
-            else: # Handle invalid SMILES
-                # print(f"Warning: Could not parse SMILES: '{smiles_string}'. Returning zero vector.")
+                # Use the generator's NumPy helper:
+                fp_array = self._morgan_gen.GetFingerprintAsNumPy(mol)
+                return fp_array.astype(np.float32)
+            else:
                 return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
         except Exception as e:
-            # print(f"Warning: Error generating Morgan fingerprint for SMILES '{smiles_string}': {e}. Returning zero vector.")
             return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
 
     def __len__(self):

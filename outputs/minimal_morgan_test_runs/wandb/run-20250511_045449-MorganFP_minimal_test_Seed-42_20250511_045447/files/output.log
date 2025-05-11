@@ -1,0 +1,4 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Validation DataLoader 0:  59%|█████████████████████████████████████████████████████████████████████████████▎                                                     | 46/78 [00:02<00:01, 20.46it/s]
+
+Detected KeyboardInterrupt, attempting graceful shutdown ...

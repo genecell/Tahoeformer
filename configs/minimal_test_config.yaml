@@ -21,7 +21,7 @@ data:
   pbulk_cell_line_col: 'cell_line'  
   drug_meta_csv_path: "data/drug_metadata.csv"
   drug_meta_id_col: 'drug' 
-  fasta_file_path: "/pollard/home/rkeivanfar/abc/reference/hg38.fa" # point to proper ref fasta + index location
+  fasta_file_path: "/home/ubuntu/data/hg38.fa" # point to proper ref fasta + index location
   enformer_input_seq_length: 49152 
   morgan_fp_radius: 2
   morgan_fp_nbits: 2048
@@ -59,3 +59,4 @@ use_wandb: True
 validate_before_train: True
 delete_checkpoint_after_run: True
 # check_val_every_n_epoch: 1      # default 
+

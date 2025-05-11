@@ -1,0 +1,52 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Validation DataLoader 0: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 78/78 [00:03<00:00, 20.79it/s]
+/home/ubuntu/.local/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: The variance of predictions or target is close to zero. This can cause instability in Pearson correlationcoefficient, leading to wrong results. Consider re-scaling the input if possible or computing using alarger dtype (currently using torch.float32). Setting the correlation coefficient to nan.
+  warnings.warn(*args, **kwargs)
+/home/ubuntu/.local/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: The variance of predictions or target is close to zero. This can cause instability in Pearson correlationcoefficient, leading to wrong results. Consider re-scaling the input if possible or computing using alarger dtype (currently using torch.float32). Setting the correlation coefficient to nan.
+  warnings.warn(*args, **kwargs)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1m            Validate metric             [0m[1m [0m┃[1m [0m[1m              DataLoader 0              [0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m [0m[36m                val_loss                [0m[36m [0m│[35m [0m[35m          0.30472078919410706           [0m[35m [0m│
+│[36m [0m[36m  validation_A-172_cell_line_mse_epoch  [0m[36m [0m│[35m [0m[35m          0.30472081899642944           [0m[35m [0m│
+│[36m [0m[36mvalidation_A-172_cell_line_pearson_epoch[0m[36m [0m│[35m [0m[35m                  nan                   [0m[35m [0m│
+│[36m [0m[36m  validation_A-172_cell_line_r2_epoch   [0m[36m [0m│[35m [0m[35m          -0.8639800548553467           [0m[35m [0m│
+│[36m [0m[36m          validation_mse_epoch          [0m[36m [0m│[35m [0m[35m          0.30472081899642944           [0m[35m [0m│
+│[36m [0m[36m        validation_pearson_epoch        [0m[36m [0m│[35m [0m[35m                  nan                   [0m[35m [0m│
+│[36m [0m[36m          validation_r2_epoch           [0m[36m [0m│[35m [0m[35m          -0.8639800548553467           [0m[35m [0m│
+└──────────────────────────────────────────┴──────────────────────────────────────────┘
+Starting training...
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name        | Type               | Params | Mode
+-----------------------------------------------------------
+0 | dna_module  | HeadAdapterWrapper | 251 M  | train
+1 | fusion_head | Sequential         | 558 K  | train
+-----------------------------------------------------------
+251 M     Trainable params
+29.7 K    Non-trainable params
+251 M     Total params
+1,007.133 Total estimated model params size (MB)
+16        Modules in train mode
+342       Modules in eval mode
+Epoch 2: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1035/1035 [02:12<00:00,  7.79it/s, v_num=0136, val_loss=0.351]
+Starting testing...                                                                                                                                                                              
+Metric validation_pearson_epoch improved. New best score: 0.026
+`Trainer.fit` stopped: `max_epochs=3` reached.
+Loading best model for testing from: /home/ubuntu/Tahoeformer/outputs/minimal_morgan_test_runs/checkpoints/epoch=0-validation_pearson_epoch=0.0265.ckpt
+Restoring states from the checkpoint path at /home/ubuntu/Tahoeformer/outputs/minimal_morgan_test_runs/checkpoints/epoch=0-validation_pearson_epoch=0.0265.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /home/ubuntu/Tahoeformer/outputs/minimal_morgan_test_runs/checkpoints/epoch=0-validation_pearson_epoch=0.0265.ckpt
+Testing DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 108/108 [00:04<00:00, 24.80it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1m           Test metric            [0m[1m [0m┃[1m [0m[1m           DataLoader 0           [0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m [0m[36m  test_A-172_cell_line_mse_epoch  [0m[36m [0m│[35m [0m[35m        0.2486892193555832        [0m[35m [0m│
+│[36m [0m[36mtest_A-172_cell_line_pearson_epoch[0m[36m [0m│[35m [0m[35m       -0.02180294878780842       [0m[35m [0m│
+│[36m [0m[36m  test_A-172_cell_line_r2_epoch   [0m[36m [0m│[35m [0m[35m       -0.9290153980255127        [0m[35m [0m│
+│[36m [0m[36m            test_loss             [0m[36m [0m│[35m [0m[35m        0.2486891895532608        [0m[35m [0m│
+│[36m [0m[36m          test_mse_epoch          [0m[36m [0m│[35m [0m[35m        0.2486892193555832        [0m[35m [0m│
+│[36m [0m[36m        test_pearson_epoch        [0m[36m [0m│[35m [0m[35m       -0.02180294878780842       [0m[35m [0m│
+│[36m [0m[36m          test_r2_epoch           [0m[36m [0m│[35m [0m[35m       -0.9290153980255127        [0m[35m [0m│
+└────────────────────────────────────┴────────────────────────────────────┘
+Deleting best checkpoint: /home/ubuntu/Tahoeformer/outputs/minimal_morgan_test_runs/checkpoints/epoch=0-validation_pearson_epoch=0.0265.ckpt

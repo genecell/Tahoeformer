@@ -1,0 +1,64 @@
+{
+  "os": "Linux-6.8.0-52-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-05-11T05:01:38.870579Z",
+  "args": [
+    "--config",
+    "configs/minimal_test_config.yaml"
+  ],
+  "program": "/home/ubuntu/Tahoeformer/scripts/train.py",
+  "codePath": "scripts/train.py",
+  "git": {
+    "remote": "https://github.com/genecell/Tahoeformer.git",
+    "commit": "fc5ae588d338297ceea3e9cba2402525f1b9e614"
+  },
+  "email": "hhqqcc6872@gmail.com",
+  "root": "outputs/minimal_morgan_test_runs",
+  "host": "192-222-55-77",
+  "executable": "/usr/bin/python",
+  "codePathLocal": "scripts/train.py",
+  "cpu_count": 52,
+  "cpu_count_logical": 104,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "11721619419136",
+      "used": "34579939328"
+    }
+  },
+  "memory": {
+    "total": "950707507200"
+  },
+  "cpu": {
+    "count": 52,
+    "countLogical": 104
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    },
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    },
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    },
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    }
+  ],
+  "cudaVersion": "12.8"
+}

@@ -1,0 +1,15 @@
+{"time":"2025-05-11T04:54:49.723350394Z","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"outputs/minimal_morgan_test_runs/wandb/run-20250511_045449-MorganFP_minimal_test_Seed-42_20250511_045447/logs/debug-core.log"}
+{"time":"2025-05-11T04:54:49.89285933Z","level":"INFO","msg":"created new stream","id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:49.892886562Z","level":"INFO","msg":"stream: started","id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:49.892902082Z","level":"INFO","msg":"handler: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:49.892914525Z","level":"INFO","msg":"sender: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:49.892927734Z","level":"INFO","msg":"writer: Do: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:50.253081327Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-11T04:54:53.529716098Z","level":"INFO","msg":"stream: closing","id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:53.529748041Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-11T04:54:53.52979781Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-11T04:54:53.988861005Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-11T04:54:54.116210126Z","level":"INFO","msg":"handler: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:54.116241315Z","level":"INFO","msg":"writer: Close: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:54.116287702Z","level":"INFO","msg":"sender: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_045447"}
+{"time":"2025-05-11T04:54:54.116313996Z","level":"INFO","msg":"stream: closed","id":"MorganFP_minimal_test_Seed-42_20250511_045447"}

@@ -1,0 +1,16 @@
+{"time":"2025-05-11T04:34:04.085630074Z","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"outputs/minimal_morgan_test_runs/wandb/run-20250511_043404-MorganFP_minimal_test_Seed-42_20250511_043356/logs/debug-core.log"}
+{"time":"2025-05-11T04:34:04.254168735Z","level":"INFO","msg":"created new stream","id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:34:04.254188468Z","level":"INFO","msg":"stream: started","id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:34:04.254211603Z","level":"INFO","msg":"sender: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:34:04.254211287Z","level":"INFO","msg":"writer: Do: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:34:04.254238211Z","level":"INFO","msg":"handler: started","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:34:04.415469704Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-11T04:38:22.332484612Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-11T04:38:22.332535635Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-11T04:38:22.684783424Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-11T04:38:22.79831692Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-05-11T04:38:22.800481791Z","level":"INFO","msg":"stream: closing","id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:38:22.800494668Z","level":"INFO","msg":"handler: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:38:22.800500474Z","level":"INFO","msg":"writer: Close: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:38:22.800509064Z","level":"INFO","msg":"sender: closed","stream_id":"MorganFP_minimal_test_Seed-42_20250511_043356"}
+{"time":"2025-05-11T04:38:22.800541124Z","level":"INFO","msg":"stream: closed","id":"MorganFP_minimal_test_Seed-42_20250511_043356"}

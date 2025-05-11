@@ -1,0 +1,78 @@
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_setup.py:_flush():70] Current SDK version is 0.19.11
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_setup.py:_flush():70] Configure stats pid to 20412
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_setup.py:_flush():70] Loading settings from /home/ubuntu/.config/wandb/settings
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_setup.py:_flush():70] Loading settings from /home/ubuntu/Tahoeformer/wandb/settings
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_setup.py:_flush():70] Loading settings from environment variables
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:setup_run_log_directory():724] Logging user logs to outputs/minimal_morgan_test_runs/wandb/run-20250511_045449-MorganFP_minimal_test_Seed-42_20250511_045447/logs/debug.log
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to outputs/minimal_morgan_test_runs/wandb/run-20250511_045449-MorganFP_minimal_test_Seed-42_20250511_045447/logs/debug-internal.log
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:init():852] calling init triggers
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'data': {'regions_csv_path': 'data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval.csv', 'pbulk_parquet_path': 'data/pseudoBulk_celllineXdrug_top3k_for_testing.parquet', 'drug_meta_csv_path': 'data/drug_metadata.csv', 'fasta_file_path': '/home/ubuntu/data/hg38.fa', 'enformer_input_seq_length': 49152, 'morgan_fp_radius': 2, 'morgan_fp_nbits': 2048, 'filter_drugs_by_ids': None, 'regions_gene_col': 'gene_name', 'regions_chr_col': 'seqnames', 'regions_start_col': 'starts', 'regions_end_col': 'ends', 'regions_strand_col': None, 'regions_set_col': 'set', 'pbulk_gene_col': 'gene_id', 'pbulk_dose_col': 'drug_dose', 'pbulk_expr_col': 'expression', 'pbulk_cell_line_col': 'cell_line', 'drug_meta_id_col': 'drug', 'drug_meta_smiles_col': 'canonical_smiles', 'pbulk_drug_col': 'drug_id'}, 'model': {'enformer_model_name': 'EleutherAI/enformer-official-rough', 'enformer_target_length': -1, 'num_output_tracks_enformer_head': 1, 'morgan_fingerprint_dim': 2048, 'dose_input_dim': 1, 'fusion_hidden_dim': 256, 'final_output_tracks': 1, 'learning_rate': 5e-06, 'loss_alpha': 1.0, 'weight_decay': 0.01, 'eval_gene_sets': None}, 'training': {'batch_size': 2, 'num_workers': 0, 'pin_memory': False, 'max_epochs': 3, 'gpus': [0], 'accelerator': 'auto', 'strategy': 'auto', 'precision': 'bf16-mixed', 'val_check_interval': 1.0, 'limit_train_batches': 1.0, 'limit_val_batches': 1.0, 'limit_test_batches': 1.0, 'deterministic': True, 'seed': 42, 'gradient_clip_val': 0.05, 'accumulate_grad_batches': 1}, 'logging': {'wandb_project': 'tahoeformer', 'wandb_entity': None, 'save_dir': 'outputs/minimal_morgan_test_runs', 'checkpoint_monitor_metric': 'validation_pearson_epoch', 'checkpoint_monitor_mode': 'max', 'save_top_k': 1, 'early_stopping_metric': 'validation_pearson_epoch', 'early_stopping_mode': 'max', 'early_stopping_patience': 5}, 'experiment_name': 'MorganFP_minimal_test', 'use_wandb': True, 'validate_before_train': True, 'delete_checkpoint_after_run': True, 'run_name': 'MorganFP_minimal_test_Seed-42_20250511_045447', '_wandb': {}}
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:init():893] starting backend
+2025-05-11 04:54:49,720 INFO    MainThread:20412 [wandb_init.py:init():897] sending inform_init request
+2025-05-11 04:54:49,722 INFO    MainThread:20412 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-11 04:54:49,722 INFO    MainThread:20412 [wandb_init.py:init():907] backend started and connected
+2025-05-11 04:54:49,723 INFO    MainThread:20412 [wandb_init.py:init():1005] updated telemetry
+2025-05-11 04:54:49,726 INFO    MainThread:20412 [wandb_init.py:init():1029] communicating run to backend with 90.0 second timeout
+2025-05-11 04:54:50,251 INFO    MainThread:20412 [wandb_init.py:init():1104] starting run threads in backend
+2025-05-11 04:54:50,405 INFO    MainThread:20412 [wandb_run.py:_console_start():2573] atexit reg
+2025-05-11 04:54:50,406 INFO    MainThread:20412 [wandb_run.py:_redirect():2421] redirect: wrap_raw
+2025-05-11 04:54:50,406 INFO    MainThread:20412 [wandb_run.py:_redirect():2490] Wrapping output streams.
+2025-05-11 04:54:50,406 INFO    MainThread:20412 [wandb_run.py:_redirect():2513] Redirects installed.
+2025-05-11 04:54:50,407 INFO    MainThread:20412 [wandb_init.py:init():1150] run started, returning control to user process
+2025-05-11 04:54:50,730 INFO    MainThread:20412 [wandb_run.py:_config_callback():1436] config_cb None None {'learning_rate': 5e-06, 'loss_alpha': 1.0, 'weight_decay': 0.01, 'eval_gene_sets': None, 'enformer_model_name': 'EleutherAI/enformer-official-rough', 'enformer_target_length': -1, 'num_output_tracks_enformer_head': 1, 'morgan_fingerprint_dim': 2048, 'dose_input_dim': 1, 'fusion_hidden_dim': 256, 'final_output_tracks': 1}
+2025-05-11 04:54:53,529 INFO    MsgRouterThr:20412 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
+2025-05-11 04:54:54,345 ERROR   MainThread:20412 [redirect.py:_on_write():664] [no run ID] error in stdout callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2494, in <lambda>
+    lambda data: self._console_raw_callback("stdout", data),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 464, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1639, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 762, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 174, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 154, in send_server_request
+    self._send_message(msg)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 151, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-05-11 04:54:54,346 ERROR   MainThread:20412 [redirect.py:_on_write():664] [no run ID] error in stdout callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2494, in <lambda>
+    lambda data: self._console_raw_callback("stdout", data),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 464, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1639, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 762, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 174, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 154, in send_server_request
+    self._send_message(msg)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 151, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
