@@ -1,0 +1,59 @@
+# ----------------------------------------------------
+# Mini config 
+# ----------------------------------------------------
+
+
+experiment_name: 'MorganFP_minimal_test'
+
+data:
+  regions_csv_path: "data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval.csv"
+  regions_gene_col: 'gene_name' 
+  regions_chr_col: 'seqnames'    
+  regions_start_col: 'starts'    
+  regions_end_col: 'ends'      
+                      
+  pbulk_parquet_path: "data/pseudoBulk_celllineXdrug_top3k_for_testing.parquet" # this is pointing small subset, not full dataset
+
+  pbulk_gene_col: 'gene_id'         
+  pbulk_drug_col: 'drug_id'         
+  pbulk_dose_col: 'drug_dose'       
+  pbulk_expr_col: 'expression'   
+  pbulk_cell_line_col: 'cell_line'  
+  drug_meta_csv_path: "data/drug_metadata.csv"
+  drug_meta_id_col: 'drug' 
+  fasta_file_path: "/pollard/home/rkeivanfar/abc/reference/hg38.fa" # point to proper ref fasta + index location
+  enformer_input_seq_length: 49152 
+  morgan_fp_radius: 2
+  morgan_fp_nbits: 2048
+
+
+model:
+  enformer_model_name: 'EleutherAI/enformer-official-rough'
+  morgan_fingerprint_dim: 2048       
+  learning_rate: 5.0e-6 
+  weight_decay: 0.01 
+
+
+training:
+  batch_size: 4              # small for test
+  max_epochs: 3              # small for test
+  precision: 'bf16-mixed'    
+  deterministic: True        
+  seed: 42                   
+  gradient_clip_val: 0.05  # from Variformer
+  accumulate_grad_batches: 1 
+
+logging:
+  wandb_project: 'tahoeformer' # Specific project for these tests
+  # wandb_entity: 'your_wandb_username_or_team'   
+  save_dir: 'outputs/minimal_morgan_test_runs' # change this for full run
+  # checkpoint_monitor_metric: 'validation_pearson_epoch' # default
+  # checkpoint_monitor_mode: 'max' # default
+  # early_stopping_metric: 'validation_pearson_epoch' # default
+  # early_stopping_mode: 'max' # default
+  early_stopping_patience: 5 # adjust to be higher for full runs
+
+use_wandb: True                              
+validate_before_train: True
+delete_checkpoint_after_run: True
+# check_val_every_n_epoch: 1      # default 
