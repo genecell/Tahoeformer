@@ -554,4 +554,4 @@ class TahoeSMILESDataset(Dataset):
         drug_id_meta = str(row[self.pbulk_drug_col])
         cell_line_meta = str(row[self.pbulk_cell_line_col])
 
-        return seq_tensor, morgan_fp_tensor, dose_tensor, tgt_tensor, gene_id_meta, drug_id_meta, cell_line_meta
+        return seq_tensor, morgan_fp_tensor, dose_tensor, tgt_tensor, gene_id_meta, drug_id_meta, cell_line_meta, chrom, start, end

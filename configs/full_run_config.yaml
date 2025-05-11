@@ -5,13 +5,13 @@
 experiment_name: 'MorganFP_full_dataset_run'
 
 data:
-  regions_csv_path: "data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval.csv"
+  regions_csv_path: "data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval_subset500_priorityCustom_parquetFiltered.csv" # Ensure this is correct
   regions_gene_col: 'gene_name'
   regions_chr_col: 'seqnames'
   regions_start_col: 'starts'
   regions_end_col: 'ends'
 
-  pbulk_parquet_path: "/pollard/home/rkeivanfar/Tahoeformer/data/pseudoBulk_celllineXdrug_13Cellline_62Drugs_includeZero.parquet" #
+  pbulk_parquet_path: "/home/ubuntu/pseudoBulk_celllineXdrug_8Cellline_27Drugs_1Dosage_includeZero.parquet" # Ensure this is correct
   pbulk_gene_col: 'gene_id'
   pbulk_drug_col: 'drug_id'
   pbulk_dose_col: 'drug_dose'
@@ -19,7 +19,7 @@ data:
   pbulk_cell_line_col: 'cell_line'
   drug_meta_csv_path: "data/drug_metadata.csv"
   drug_meta_id_col: 'drug'
-  fasta_file_path: "/pollard/home/rkeivanfar/abc/reference/hg38.fa" # Ensure this is correct for your full run
+  fasta_file_path: "/home/ubuntu/data/hg38.fa" # Ensure this is correct for your full run
   enformer_input_seq_length: 49152
   morgan_fp_radius: 2
   morgan_fp_nbits: 2048
@@ -32,14 +32,14 @@ model:
 
 training:
   batch_size: 16             # Increased for full run
-  max_epochs: 150           # Increased for full run
+  max_epochs: 100           # Increased for full run
   precision: 'bf16-mixed'
   deterministic: True
   seed: 42
   gradient_clip_val: 0.05
   accumulate_grad_batches: 1
   gpus: -1                   # Use all available GPUs
-  strategy: 'ddp_find_unused_parameters_true' # Suitable for multi-GPU
+  strategy: 'ddp_find_unused_parameters_true' # Suitable for multi-GPU 
 
 logging:
   wandb_project: 'tahoeformer' # Specific project for these tests
@@ -55,3 +55,4 @@ use_wandb: True
 validate_before_train: True
 delete_checkpoint_after_run: False # Keep checkpoint for full runs
 # check_val_every_n_epoch: 1      # default 
+

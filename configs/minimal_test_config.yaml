@@ -2,7 +2,6 @@
 # Mini config 
 # ----------------------------------------------------
 
-
 experiment_name: 'MorganFP_minimal_test'
 
 data:
@@ -13,7 +12,6 @@ data:
   regions_end_col: 'ends'      
                       
   pbulk_parquet_path: "data/pseudoBulk_celllineXdrug_top3k_for_testing.parquet" # this is pointing small subset, not full dataset
-
   pbulk_gene_col: 'gene_id'         
   pbulk_drug_col: 'drug_id'         
   pbulk_dose_col: 'drug_dose'       

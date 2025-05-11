@@ -2,3 +2,9 @@ data/hg38.fa
 data/hg38.fa.fai
 env.yml
 tahoeformer_env/
+
+outputs/
+
+hf_model_export/
+
+

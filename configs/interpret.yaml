@@ -1,0 +1,58 @@
+# ----------------------------------------------------
+# Full Dataset Run Config
+# ----------------------------------------------------
+
+experiment_name: 'MorganFP_interpret'
+
+data:
+  regions_csv_path: "data/Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval_subset500_priorityCustom_parquetFiltered.csv"
+  regions_gene_col: 'gene_name'
+  regions_chr_col: 'seqnames'
+  regions_start_col: 'starts'
+  regions_end_col: 'ends'
+
+  pbulk_parquet_path: "/home/ubuntu/pseudoBulk_celllineXdrug_8Cellline_27Drugs_1Dosage_includeZero.parquet" # Ensure this is correct
+  pbulk_gene_col: 'gene_id'
+  pbulk_drug_col: 'drug_id'
+  pbulk_dose_col: 'drug_dose'
+  pbulk_expr_col: 'expression'
+  pbulk_cell_line_col: 'cell_line'
+  drug_meta_csv_path: "data/drug_metadata.csv"
+  drug_meta_id_col: 'drug'
+  fasta_file_path: "/home/ubuntu/data/hg38.fa" # Ensure this is correct for your full run
+  enformer_input_seq_length: 49152
+  morgan_fp_radius: 2
+  morgan_fp_nbits: 2048
+
+model:
+  enformer_model_name: 'EleutherAI/enformer-official-rough'
+  morgan_fingerprint_dim: 2048
+  learning_rate: 5.0e-6
+  weight_decay: 0.01
+
+training:
+  batch_size: 1             # Increased for full run
+  max_epochs: 100           # Increased for full run
+  precision: 'bf16-mixed'
+  deterministic: True
+  seed: 42
+  gradient_clip_val: 0.05
+  accumulate_grad_batches: 1
+  gpus: -1                   # Use all available GPUs
+  strategy: 'ddp_find_unused_parameters_true' # Suitable for multi-GPU 
+
+logging:
+  wandb_project: 'tahoeformer' # Specific project for these tests
+  # wandb_entity: 'your_wandb_username_or_team'
+  save_dir: 'outputs/morgan_full_dataset_interpret' # Updated save directory
+  # checkpoint_monitor_metric: 'validation_pearson_epoch' # default
+  # checkpoint_monitor_mode: 'max' # default
+  # early_stopping_metric: 'validation_pearson_epoch' # default
+  # early_stopping_mode: 'max' # default
+  early_stopping_patience: 30 # Increased patience
+
+use_wandb: True
+validate_before_train: True
+delete_checkpoint_after_run: False # Keep checkpoint for full runs
+# check_val_every_n_epoch: 1      # default 
+
