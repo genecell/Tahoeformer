@@ -35,13 +35,15 @@ model:
 
 
 training:
-  batch_size: 4              # small for test
+  batch_size: 2              # small for test
   max_epochs: 3              # small for test
   precision: 'bf16-mixed'    
   deterministic: True        
   seed: 42                   
   gradient_clip_val: 0.05  # from Variformer
   accumulate_grad_batches: 1 
+  gpus: [0]                  # Force use of GPU 0
+  strategy: 'auto'           # Changed from ddp_find_unused_parameters_true
 
 logging:
   wandb_project: 'tahoeformer' # Specific project for these tests

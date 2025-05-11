@@ -132,7 +132,7 @@ class LitBaseModel(pl.LightningModule):
         y_hat = self(dna_seq, morgan_fingerprints, dose) # Call forward method of derived class
 
         loss = self.loss_fn(y_hat, target_expression)
-        self.log(f'{step_type}_loss', loss, batch_size=target_expression.shape[0], on_step=(step_type=='train'), on_epoch=True, prog_bar=(step_type!='train'))
+        self.log(f'{step_type}_loss', loss, batch_size=target_expression.shape[0], on_step=(step_type=='train' and False), on_epoch=True, prog_bar=(step_type!='train'))
         
         if step_type != 'train':
             # Prepare data for MetricLogger

@@ -47,6 +47,7 @@ DEFAULT_CONFIG = {
         'regions_start_col': 'start',
         'regions_end_col': 'end',
         'regions_strand_col': None,
+        'regions_set_col': 'set', # New: Column name for train/val/test split in regions_csv
         'pbulk_gene_col': 'gene_id',
         'pbulk_dose_col': 'dose_nM',
         'pbulk_expr_col': 'value',
@@ -190,6 +191,7 @@ def load_tahoe_smiles_dataloaders(config):
         'regions_start_col': data_config.get('regions_start_col', 'starts'),
         'regions_end_col': data_config.get('regions_end_col', 'ends'),
         'regions_strand_col': data_config.get('regions_strand_col', None),
+        'regions_set_col': data_config.get('regions_set_col', 'set'), # Added for set-based splitting
         'pbulk_gene_col': data_config.get('pbulk_gene_col', 'gene_id'),
         'pbulk_dose_col': data_config.get('pbulk_dose_col', 'dose_nM'),
         'pbulk_expr_col': data_config.get('pbulk_expr_col', 'value'),
@@ -198,51 +200,59 @@ def load_tahoe_smiles_dataloaders(config):
         'drug_meta_smiles_col': data_config.get('drug_meta_smiles_col', 'canonical_smiles')
     }
     
-    print(f"Initializing TahoeSMILESDataset with morgan_fp_nbits: {dataset_args['morgan_fp_nbits']}")
+    # print(f"Initializing TahoeSMILESDataset with morgan_fp_nbits: {dataset_args['morgan_fp_nbits']}")
 
-    # Assuming split is handled by having separate files or by an outer loop if needed.
-    # Here we load the full dataset as specified by paths.
-    # For train/val/test splits, you'd typically use PyTorch Lightning's DataModule
-    # or handle splitting manually (e.g., by indices or separate dataset instances).
-    # For simplicity, this example uses the same dataset for train/val/test.
-    # In a real scenario, ensure distinct datasets or proper splitting.
+    # Instantiate dataset for each split using the 'target_set' parameter
+    print("Initializing train dataset...")
+    train_dataset = TahoeSMILESDataset(**dataset_args, target_set='train')
+    print("Initializing validation dataset...")
+    val_dataset = TahoeSMILESDataset(**dataset_args, target_set='valid')
+    # In the original Enformer_genomic_regions_TSSCenteredGenes_FixedOverlapRemoval.csv, 
+    # the validation set is often named 'valid'. If it's 'validation' in your file, adjust accordingly.
+    print("Initializing test dataset...")
+    test_dataset = TahoeSMILESDataset(**dataset_args, target_set='test')
+
+    # Check if datasets are potentially empty
+    if len(train_dataset) == 0:
+        print("WARNING: Train dataset is empty. This could be due to filtering by set='train' or other data issues. Training might fail or be skipped.")
+    if len(val_dataset) == 0:
+        print("WARNING: Validation dataset is empty (set='valid'). Validation loop will likely be skipped.")
+    if len(test_dataset) == 0:
+        print("WARNING: Test dataset is empty (set='test'). Testing loop will likely be skipped.")
+
+    # Original logic for empty full_dataset is no longer directly applicable
+    # We proceed hoping at least train_dataset has data.
+    # PyTorch Lightning handles empty val_loader or test_loader gracefully.
+
+    # Removed random_split logic
+    # train_size = int(0.8 * len(full_dataset))
+    # val_size = int(0.1 * len(full_dataset))
+    # test_size = len(full_dataset) - train_size - val_size
     
-    full_dataset = TahoeSMILESDataset(**dataset_args)
-
-    if len(full_dataset) == 0:
-        raise ValueError("The initialized dataset is empty. Please check data paths, file contents, and filtering logic.")
-
-    # Basic split: 80% train, 10% val, 10% test (requires careful seed for reproducibility)
-    # This is a placeholder for a more robust splitting strategy.
-    # Consider using fixed splits or a DataModule for production.
-    train_size = int(0.8 * len(full_dataset))
-    val_size = int(0.1 * len(full_dataset))
-    test_size = len(full_dataset) - train_size - val_size
+    # # Ensure at least one sample in each split if dataset is very small
+    # if train_size == 0 and len(full_dataset) > 0: train_size = 1
+    # if val_size == 0 and len(full_dataset) > train_size : val_size = 1
+    # if test_size == 0 and len(full_dataset) > train_size + val_size: test_size = 1
     
-    # Ensure at least one sample in each split if dataset is very small
-    if train_size == 0 and len(full_dataset) > 0: train_size = 1
-    if val_size == 0 and len(full_dataset) > train_size : val_size = 1
-    if test_size == 0 and len(full_dataset) > train_size + val_size: test_size = 1
-    
-    # Adjust sizes to sum up to len(full_dataset) if rounding caused issues
-    if train_size + val_size + test_size != len(full_dataset):
-        train_size = len(full_dataset) - val_size - test_size
+    # # Adjust sizes to sum up to len(full_dataset) if rounding caused issues
+    # if train_size + val_size + test_size != len(full_dataset):
+    #     train_size = len(full_dataset) - val_size - test_size
 
-    if train_size <=0 or val_size <=0 : # Test size can be 0 if not testing here
-        print(f"Warning: Dataset too small for a meaningful split (total: {len(full_dataset)}). Train size: {train_size}, Val size: {val_size}. This might lead to issues.")
-        # Fallback if dataset is extremely small to avoid crash, though training might not be meaningful.
-        if len(full_dataset) > 0:
-            train_dataset = full_dataset
-            val_dataset = full_dataset # Using full for val too in this extreme case
-            test_dataset = full_dataset
-        else:
-            raise ValueError("Dataset is empty, cannot create dataloaders.")
-    else:
-        train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(
-            full_dataset, 
-            [train_size, val_size, test_size],
-            generator=torch.Generator().manual_seed(config['training'].get('seed', 42))
-        )
+    # if train_size <=0 or val_size <=0 : # Test size can be 0 if not testing here
+    #     print(f"Warning: Dataset too small for a meaningful split (total: {len(full_dataset)}). Train size: {train_size}, Val size: {val_size}. This might lead to issues.")
+    #     # Fallback if dataset is extremely small to avoid crash, though training might not be meaningful.
+    #     if len(full_dataset) > 0:
+    #         train_dataset = full_dataset
+    #         val_dataset = full_dataset # Using full for val too in this extreme case
+    #         test_dataset = full_dataset
+    #     else:
+    #         raise ValueError("Dataset is empty, cannot create dataloaders.")
+    # else:
+    #     train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(
+    #         full_dataset, 
+    #         [train_size, val_size, test_size],
+    #         generator=torch.Generator().manual_seed(config['training'].get('seed', 42))
+    #     )
 
     train_loader = DataLoader(
         train_dataset,

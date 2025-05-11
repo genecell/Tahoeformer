@@ -7,6 +7,8 @@ import numpy as np
 import os
 import pyfaidx 
 import kipoiseq.transforms.functional 
+from rdkit import Chem
+from rdkit.Chem.AllChem import GetMorganFingerprintAsBitVect
 
 # --- Global Config ---
 # Enformer typically uses a 196,608 bp input sequence.
@@ -341,81 +343,86 @@ class TahoeDataset(Dataset):
         return one_hot_sequence_tensor, target_tensor
 
 
-# --- SMILES Tokenizer ---
-class SMILESTokenizer:
-    """
-    Simple char-level SMILES tokenizer with [PAD]/[UNK] and fixed max length.
-    """
-    def __init__(self, smiles_list, pad_token='[PAD]', unk_token='[UNK]', max_length=128):
-        chars = sorted(set(''.join(smiles_list)))
-        self.pad_token = pad_token
-        self.unk_token = unk_token
-        self.idx2char = [pad_token, unk_token] + chars
-        self.char2idx = {c:i for i,c in enumerate(self.idx2char)}
-        self.max_length = max_length
-
-    def encode(self, smiles: str):
-        idxs = [ self.char2idx.get(c, self.char2idx[self.unk_token]) for c in smiles ]
-        if len(idxs) > self.max_length:
-            idxs = idxs[:self.max_length]
-        mask = [1]*len(idxs)
-        pad_len = self.max_length - len(idxs)
-        idxs.extend([self.char2idx[self.pad_token]]*pad_len)
-        mask.extend([0]*pad_len)
-        return idxs, mask
-
 # --- Extended Dataset for SMILES ---
 class TahoeSMILESDataset(Dataset):
     """
     Extends TahoeDataset to also return:
-        - SMILES tokens + mask
+        - Morgan Fingerprints for the drug
         - drug dose
         - target expression
     """
     def __init__(self,
-            tss_regions_csv_path: str,
-             genome_fasta_path: str,
-             pseudobulk_data_path: str,
-             drug_metadata_path: str,
-             enformer_input_seq_length: int = ENFORMER_INPUT_SEQ_LENGTH,
-             smiles_max_length: int       = 128,
-             regions_csv_gene_col: str    = 'gene_name',
-             pseudobulk_csv_gene_col: str = 'gene_id',
-             regions_csv_chr_col: str     = 'seqnames',
-             regions_csv_start_col: str   = 'starts',
-             regions_csv_end_col: str     = 'ends'):
+                 regions_csv_path: str, # Renamed from tss_regions_csv_path for clarity with config
+                 pbulk_parquet_path: str, # Renamed from pseudobulk_data_path for clarity with config
+                 drug_meta_csv_path: str, # Renamed from drug_metadata_path for clarity with config
+                 fasta_file_path: str,    # Renamed from genome_fasta_path for clarity with config
+                 enformer_input_seq_length: int = ENFORMER_INPUT_SEQ_LENGTH,
+                 # Morgan fingerprint parameters (from data_config)
+                 morgan_fp_radius: int = 2,
+                 morgan_fp_nbits: int = 2048,
+                 # Column names from regions_csv (from data_config)
+                 regions_gene_col: str    = 'gene_name',
+                 regions_chr_col: str     = 'seqnames',
+                 regions_start_col: str   = 'starts',
+                 regions_end_col: str     = 'ends',
+                 # Column names from pbulk_parquet (from data_config)
+                 pbulk_gene_col: str      = 'gene_id',
+                 pbulk_drug_col: str      = 'drug_id',
+                 pbulk_dose_col: str      = 'drug_dose',
+                 pbulk_expr_col: str      = 'expression',
+                 pbulk_cell_line_col: str = 'cell_line',
+                 # Column names from drug_meta_csv (from data_config)
+                 drug_meta_id_col: str    = 'drug',
+                 drug_meta_smiles_col: str = 'canonical_smiles',
+                 filter_drugs_by_ids: list = None, # Added from dataset_args
+                 regions_strand_col: str = None,    # Added from dataset_args, though not used in current __getitem__
+                 regions_set_col: str = 'set',      # New: Name of the column in regions_csv for data splitting
+                 target_set: str = None             # New: Specific set to load (e.g., "train", "valid", "test")
+                 ):
         super().__init__()
 
         # store config
         self.seq_len = enformer_input_seq_length
-        self.smiles_max_length = smiles_max_length
-        self.regions_gene_col    = regions_csv_gene_col
-        self.pbulk_gene_col      = pseudobulk_csv_gene_col
-        self.regions_chr_col     = regions_csv_chr_col
-        self.regions_start_col   = regions_csv_start_col
-        self.regions_end_col     = regions_csv_end_col
+        self.morgan_fp_radius = morgan_fp_radius
+        self.morgan_fp_nbits = morgan_fp_nbits
+
+        self.regions_gene_col    = regions_gene_col
+        self.regions_chr_col     = regions_chr_col
+        self.regions_start_col   = regions_start_col
+        self.regions_end_col     = regions_end_col
+        self.regions_set_col     = regions_set_col # Store the name of the set column
+
+        self.pbulk_gene_col      = pbulk_gene_col
+        self.pbulk_drug_col      = pbulk_drug_col
+        self.pbulk_dose_col      = pbulk_dose_col
+        self.pbulk_expr_col      = pbulk_expr_col
+        self.pbulk_cell_line_col = pbulk_cell_line_col
+
+        self.drug_meta_id_col    = drug_meta_id_col
+        self.drug_meta_smiles_col= drug_meta_smiles_col
+        
+        self.target_set          = target_set # Store the specific set value for this instance
 
         # load & merge regions + pseudobulk
-        print(f"  Loading TSS regions from: {tss_regions_csv_path}")
+        print(f"  Loading TSS regions from: {regions_csv_path}")
         try:
-            regs = pd.read_csv(tss_regions_csv_path)
+            regs = pd.read_csv(regions_csv_path)
             print(f"    Successfully loaded regions CSV with {len(regs)} gene region entries.")
         except FileNotFoundError:
-            print(f"FATAL ERROR: Regions CSV file not found at {tss_regions_csv_path}")
+            print(f"FATAL ERROR: Regions CSV file not found at {regions_csv_path}")
             raise
         except Exception as e:
             print(f"FATAL ERROR loading regions CSV: {e}")
             raise
 
-        print(f"  Loading pseudobulk targets from: {pseudobulk_data_path} (expected Parquet format)")
+        print(f"  Loading pseudobulk targets from: {pbulk_parquet_path} (expected Parquet format)")
         try:
-            pb = pd.read_parquet(pseudobulk_data_path)
+            pb = pd.read_parquet(pbulk_parquet_path)
             print(f"    Successfully loaded pseudobulk Parquet file with {len(pb)} entries.")
         except FileNotFoundError:
-            print(f"FATAL ERROR: Pseudobulk Parquet file not found at {pseudobulk_data_path}")
+            print(f"FATAL ERROR: Pseudobulk Parquet file not found at {pbulk_parquet_path}")
             raise
         except Exception as e:
-            # This might catch errors if the correct Parquet engine (e.g., pyarrow) is not installed
             print(f"FATAL ERROR loading or parsing pseudobulk Parquet file: {e}")
             print("  Ensure the file is a valid Parquet file and you have a Parquet engine like 'pyarrow' or 'fastparquet' installed.")
             raise
@@ -432,19 +439,67 @@ class TahoeSMILESDataset(Dataset):
             right_on = self.pbulk_gene_col,
             how      = 'inner'
         )
+        
+        if filter_drugs_by_ids and self.pbulk_drug_col in self.samples_df.columns:
+            print(f"    Filtering samples to include only drugs: {filter_drugs_by_ids}")
+            initial_count = len(self.samples_df)
+            self.samples_df = self.samples_df[self.samples_df[self.pbulk_drug_col].isin(filter_drugs_by_ids)]
+            print(f"    Retained {len(self.samples_df)} samples after drug filtering (from {initial_count}).")
+            if len(self.samples_df) == 0:
+                print("WARNING: No samples remaining after filtering by drug IDs. Check your filter_drugs_by_ids list and drug IDs in pbulk data.")
 
-        # load drug metadata & tokenizer
-        dm = pd.read_csv(drug_metadata_path)
-        dm['canonical_smiles'] = dm['canonical_smiles'].fillna('').astype(str)
-        self.smiles_tok = SMILESTokenizer(
-            dm['canonical_smiles'].tolist(),
-            max_length=self.smiles_max_length
-        )
-        self.drug_meta = dm.set_index('drug')
+        # Filter by target_set if specified
+        if self.target_set:
+            if self.regions_set_col in self.samples_df.columns:
+                print(f"    Filtering samples for set: '{self.target_set}' using column '{self.regions_set_col}'.")
+                initial_count_set_filter = len(self.samples_df)
+                self.samples_df = self.samples_df[self.samples_df[self.regions_set_col] == self.target_set].copy()
+                print(f"    Retained {len(self.samples_df)} samples after filtering for set '{self.target_set}' (from {initial_count_set_filter}).")
+                if len(self.samples_df) == 0:
+                    print(f"WARNING: No samples remaining for this dataset instance (target_set='{self.target_set}') after filtering. Check the '{self.regions_set_col}' column in '{regions_csv_path}' for entries matching '{self.target_set}' and their overlap with pseudobulk data.")
+            else:
+                print(f"WARNING: target_set '{self.target_set}' was specified, but the column '{self.regions_set_col}' was not found in the merged DataFrame. No set-specific filtering was applied for this dataset instance. This instance will contain all data that matched other criteria.")
+
+        # load drug metadata
+        print(f"  Loading drug metadata from: {drug_meta_csv_path}")
+        try:
+            dm = pd.read_csv(drug_meta_csv_path)
+            print(f"    Successfully loaded drug metadata with {len(dm)} entries.")
+        except FileNotFoundError:
+            print(f"FATAL ERROR: Drug metadata CSV not found at {drug_meta_csv_path}")
+            raise
+        except Exception as e:
+            print(f"FATAL ERROR loading drug metadata CSV: {e}")
+            raise
+        
+        # Ensure SMILES and ID columns are present and fill NA SMILES with empty string
+        if self.drug_meta_smiles_col not in dm.columns:
+            raise ValueError(f"SMILES column '{self.drug_meta_smiles_col}' not found in drug metadata.")
+        if self.drug_meta_id_col not in dm.columns:
+            raise ValueError(f"Drug ID column '{self.drug_meta_id_col}' not found in drug metadata.")
+        dm[self.drug_meta_smiles_col] = dm[self.drug_meta_smiles_col].fillna('').astype(str)
+        self.drug_meta = dm.set_index(self.drug_meta_id_col)
 
         # fasta reader & one-hot encoder
-        self.fasta_reader = FastaReader(genome_fasta_path)
+        self.fasta_reader = FastaReader(fasta_file_path)
         self.encoder      = GenomeOneHotEncoder(sequence_length=self.seq_len)
+        print("TahoeSMILESDataset initialized.")
+
+    def _generate_morgan_fingerprint(self, smiles_string: str) -> np.ndarray:
+        """Generates a Morgan fingerprint from a SMILES string."""
+        if not smiles_string: # Handle empty SMILES string
+            return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
+        try:
+            mol = Chem.MolFromSmiles(smiles_string)
+            if mol:
+                fp = GetMorganFingerprintAsBitVect(mol, self.morgan_fp_radius, nBits=self.morgan_fp_nbits)
+                return np.array(fp, dtype=np.float32)
+            else: # Handle invalid SMILES
+                # print(f"Warning: Could not parse SMILES: '{smiles_string}'. Returning zero vector.")
+                return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
+        except Exception as e:
+            # print(f"Warning: Error generating Morgan fingerprint for SMILES '{smiles_string}': {e}. Returning zero vector.")
+            return np.zeros(self.morgan_fp_nbits, dtype=np.float32)
 
     def __len__(self):
         return len(self.samples_df)
@@ -466,26 +521,31 @@ class TahoeSMILESDataset(Dataset):
         oh  = self.encoder.encode(seq)
         seq_tensor = torch.tensor(oh, dtype=torch.float32)
 
-        # --- SMILES + mask ---
-        drug_id_for_smiles = row['drug_id'] # Keep original drug_id for SMILES lookup
-        smiles = self.drug_meta.at[drug_id_for_smiles, 'canonical_smiles'] \
-                     if drug_id_for_smiles in self.drug_meta.index else ''
-        ids, mask = self.smiles_tok.encode(smiles)
-        smiles_ids  = torch.tensor(ids,  dtype=torch.long)
-        smiles_mask = torch.tensor(mask, dtype=torch.bool)
+        # --- Morgan Fingerprint --- 
+        drug_id_for_fp = row[self.pbulk_drug_col]
+        smiles_string = ''
+        if drug_id_for_fp in self.drug_meta.index:
+            smiles_string = self.drug_meta.loc[drug_id_for_fp, self.drug_meta_smiles_col]
+            # If multiple entries for a drug_id, loc might return a Series. Take the first one.
+            if isinstance(smiles_string, pd.Series):
+                smiles_string = smiles_string.iloc[0]
+        else:
+            # print(f"Warning: Drug ID {drug_id_for_fp} not found in drug_meta. Using empty SMILES for fingerprint.")
+            pass # SMILES string remains empty, will result in zero vector
+        
+        morgan_fp = self._generate_morgan_fingerprint(str(smiles_string)) # Ensure it's a string
+        morgan_fp_tensor = torch.tensor(morgan_fp, dtype=torch.float32)
 
         # --- dose & target ---
-        dose_val = float(row['drug_dose'])
-        expression_val = float(row['expression'])
+        dose_val = float(row[self.pbulk_dose_col])
+        expression_val = float(row[self.pbulk_expr_col])
 
         dose_tensor = torch.tensor([dose_val], dtype=torch.float32)
         tgt_tensor  = torch.tensor([expression_val], dtype=torch.float32)
 
         # --- Metadata for Logging ---
-        # These names must match what's expected by pl_models.py if it unpacks them directly.
-        # self.pbulk_gene_col is used for gene_id (as it's the one from pseudobulk data matching regions)
         gene_id_meta = str(row[self.pbulk_gene_col]) 
-        drug_id_meta = str(row['drug_id'])      # This column comes from pseudobulk_df
-        cell_line_meta = str(row['cell_line'])  # This column comes from pseudobulk_df
+        drug_id_meta = str(row[self.pbulk_drug_col])
+        cell_line_meta = str(row[self.pbulk_cell_line_col])
 
-        return seq_tensor, smiles_ids, smiles_mask, dose_tensor, tgt_tensor, gene_id_meta, drug_id_meta, cell_line_meta
+        return seq_tensor, morgan_fp_tensor, dose_tensor, tgt_tensor, gene_id_meta, drug_id_meta, cell_line_meta
